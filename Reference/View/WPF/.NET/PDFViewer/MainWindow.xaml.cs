@@ -54,7 +54,6 @@ namespace PDFViewer
             documentView.Dispose();
             visualDocument.Dispose();
         }
-
         private ICommand openPDFCommand;
         public ICommand OpenPDFCommand
         {
@@ -71,6 +70,64 @@ namespace PDFViewer
 
         public void OpenPDFCommandExecute()
         {
+            ContextMenu openCtxMenu = FindResource("OpenFileContextMenu") as ContextMenu;
+            openCtxMenu.PlacementTarget = btnOpen;
+            openCtxMenu.Placement = System.Windows.Controls.Primitives.PlacementMode.Bottom;
+            openCtxMenu.IsOpen = true;
+        }
+
+        private ICommand openIncrementalPDFCommand;
+        public ICommand OpenIncrementalPDFCommand
+        {
+            get
+            {
+                return openIncrementalPDFCommand ?? (openIncrementalPDFCommand = new CommandHandler(() => OpenIncrementalPDFCommandExecute(), () => OpenIncrementalPDFCommandCanExecute));
+            }
+        }
+
+        public bool OpenIncrementalPDFCommandCanExecute
+        {
+            get { return true; }
+        }
+
+        public void OpenIncrementalPDFCommandExecute()
+        {
+            // In incremental mode the viewer loads only the required parts for display.
+            // Incremental load mode is achieved by loading the source file directly in the viewer.
+            // The source PDF file is kept open and any changes on the PDF file must be saved in the source file as they are written in incremental update mode.
+
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.DefaultExt = ".pdf";
+            ofd.Filter = "PDF files (.pdf)|*.pdf|All files (*.*)|*.*";
+
+            if (ofd.ShowDialog() == true)
+            {
+                visualDocument.Load(ofd.FileName);
+                UpdateLayoutButtons();
+                UpdateCurrentActivity(Activity.PanAndScan);
+            }
+        }
+
+        private ICommand openFullPDFCommand;
+        public ICommand OpenFullPDFCommand
+        {
+            get
+            {
+                return openFullPDFCommand ?? (openFullPDFCommand = new CommandHandler(() => OpenFullPDFCommandExecute(), () => OpenFullPDFCommandCanExecute));
+            }
+        }
+
+        public bool OpenFullPDFCommandCanExecute
+        {
+            get { return true; }
+        }
+
+        public void OpenFullPDFCommandExecute()
+        {
+            // In full mode the viewer loads the whole file in memory.
+            // Full load mode is achieved by loading the source file in a PdfFixedDocument and then loading the fixed document in the viewer.
+            // The source PDF file can be moved/deleted and any changes on the PDF file can be saved to any file as the PDF file is written in full.
+
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.DefaultExt = ".pdf";
             ofd.Filter = "PDF files (.pdf)|*.pdf|All files (*.*)|*.*";

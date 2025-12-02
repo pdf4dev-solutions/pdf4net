@@ -18,6 +18,10 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
+        <ContextMenu x:Key="OpenFileContextMenu">
+            <MenuItem Header="Open in incremental mode" Command="{Binding OpenIncrementalPDFCommand}" />
+            <MenuItem Header="Open in full mode" Command="{Binding OpenFullPDFCommand}" />
+        </ContextMenu>
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
@@ -26,7 +30,7 @@
         </Grid.RowDefinitions>
         <ToolBarTray Grid.Row="0">
             <ToolBar Band="1" BandIndex="1">
-                <Button Command="{Binding OpenPDFCommand}">
+                <Button Command="{Binding OpenPDFCommand}" x:Name="btnOpen">
                     <Image Source="/Resources/File.Open.png" />
                 </Button>
                 <Button Command="{Binding SavePDFCommand}">

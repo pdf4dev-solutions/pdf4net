@@ -65,6 +65,30 @@ namespace PDFViewer
 
         private void tsbOpen_Click(object sender, EventArgs e)
         {
+            Point pt = this.tsMain.PointToScreen(tsbOpen.Bounds.Location);
+            pt.Y += tsbOpen.Bounds.Height;
+            cmsOpen.Show(pt, ToolStripDropDownDirection.BelowRight);
+        }
+
+        private void tsmiOpenIncremental_Click(object sender, EventArgs e)
+        {
+            // In incremental mode the viewer loads only the required parts for display.
+            // Incremental load mode is achieved by loading the source file directly in the viewer.
+            // The source PDF file is kept open and any changes on the PDF file must be saved in the source file as they are written in incremental update mode.
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                pdfDocument.Load(ofd.FileName);
+                tsslFileName.Text = ofd.FileName;
+
+                EnableTools(true);
+            }
+        }
+
+        private void tsmiOpenFull_Click(object sender, EventArgs e)
+        {
+            // In full mode the viewer loads the whole file in memory.
+            // Full load mode is achieved by loading the source file in a PdfFixedDocument and then loading the fixed document in the viewer.
+            // The source PDF file can be moved/deleted and any changes on the PDF file can be saved to any file as the PDF file is written in full.
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 pdfDocument.Load(new PDFFixedDocument(ofd.FileName));

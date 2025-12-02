@@ -16,7 +16,7 @@
     <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="O2S.Components.PDF4NET.View.NET.Win" Version="16.0.0.0" />
+    <PackageReference Include="PDF4DEV.Components.PDF4NET.View.NET.Win" Version="16.0.1.0" />
   </ItemGroup>
 
 </Project>
