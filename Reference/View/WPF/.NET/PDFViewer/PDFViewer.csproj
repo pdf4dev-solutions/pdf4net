@@ -81,7 +81,7 @@
     <None Remove="Resources\Text.Underline.png" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="PDF4DEV.Components.PDF4NET.View.NET.Wpf" Version="16.0.1.0" />
+    <PackageReference Include="PDF4DEV.Components.PDF4NET.View.NET.Wpf" Version="16.2.0.0" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Annotations.Circle.png" />
