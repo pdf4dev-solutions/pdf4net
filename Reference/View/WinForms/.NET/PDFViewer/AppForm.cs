@@ -1,11 +1,14 @@
-﻿using System;
-using System.Drawing;
-using System.Globalization;
-using System.Windows.Forms;
-using O2S.Components.PDF4NET;
+﻿using O2S.Components.PDF4NET;
+using O2S.Components.PDF4NET.Actions;
+using O2S.Components.PDF4NET.Annotations;
+using O2S.Components.PDF4NET.Destinations;
 using O2S.Components.PDF4NET.View;
 using O2S.Components.PDF4NET.View.Content;
 using O2S.Components.PDF4NET.View.Layouts;
+using System;
+using System.Drawing;
+using System.Globalization;
+using System.Windows.Forms;
 
 namespace PDFViewer
 {
@@ -484,6 +487,16 @@ namespace PDFViewer
             }
         }
 
+        private void tssbSettings_Click(object sender, EventArgs e)
+        {
+            tssbSettings.ShowDropDown();
+        }
+
+        private void tsmiShowAnnotationTooltips_Click(object sender, EventArgs e)
+        {
+            pdfView.AnnotationToolTips = tsmiShowAnnotationTooltips.Checked ? new PDFVisualAnnotationToolTip() : null;
+        }
+
         private void pdfView_UserInteractionModeChanged(object sender, EventArgs e)
         {
             tsbPan.Checked = pdfView.UserInteractionMode == PDFUserInteractionMode.PanAndScan;
@@ -548,6 +561,50 @@ namespace PDFViewer
         private void pdfView_BeforePageDelete(object sender, PDFVisualPageDeleteEventArgs e)
         {
             e.AllowDelete = MessageBox.Show("Are you sure you want to delete the current page?", "PDF4NET - PDF Viewer", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes;
+        }
+
+        private void pdfView_AnnotationToolTipContentRequested(object sender, PDFVisualAnnotationToolTipContentRequestedEventArgs e)
+        {
+            if (e.VisualAnnotation.Annotation.Type == PDFAnnotationType.Link)
+            {
+                PDFUriAction uriAction = (e.VisualAnnotation.Annotation as PDFLinkAnnotation).Action as PDFUriAction;
+                if (uriAction != null)
+                {
+                    e.Title = "";
+                    e.Contents = $"Link: {uriAction.URI}";
+                }
+                else
+                {
+                    PDFDestination linkDest = (e.VisualAnnotation.Annotation as PDFLinkAnnotation).Destination;
+                    if (linkDest == null)
+                    {
+                        PDFGoToAction goToAction = (e.VisualAnnotation.Annotation as PDFLinkAnnotation).Action as PDFGoToAction;
+                        if (goToAction != null)
+                        {
+                            linkDest = goToAction.Destination;
+                        }
+                    }
+                    if (linkDest != null)
+                    {
+                        e.Title = "";
+                        switch (linkDest.Type)
+                        {
+                            case PDFDestinationType.PageDestination:
+                                PDFPageDirectDestination pageDestination = linkDest as PDFPageDirectDestination;
+                                e.Contents = $"Destination page: {pdfView.Document.FixedDocument.Pages.IndexOf(pageDestination.Page) + 1}";
+                                break;
+                            case PDFDestinationType.PageNumberDestination:
+                                PDFPageNumberDestination pageNumberDestination = linkDest as PDFPageNumberDestination;
+                                e.Contents = $"Destination page: {pageNumberDestination.PageNumber + 1}";
+                                break;
+                            case PDFDestinationType.NamedDestination:
+                                PDFNamedDestination namedDestination = linkDest as PDFNamedDestination;
+                                e.Contents = $"Destination name: {namedDestination.Name}";
+                                break;
+                        }
+                    }
+                }
+            }
         }
 
         private void EnableTools(bool enable)

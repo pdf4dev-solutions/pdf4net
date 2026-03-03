@@ -138,6 +138,8 @@
             cmsOpen = new ContextMenuStrip(components);
             tsmiOpenIncremental = new ToolStripMenuItem();
             tsmiOpenFull = new ToolStripMenuItem();
+            tssbSettings = new ToolStripSplitButton();
+            tsmiShowAnnotationTooltips = new ToolStripMenuItem();
             tsMain.SuspendLayout();
             tscApp.BottomToolStripPanel.SuspendLayout();
             tscApp.ContentPanel.SuspendLayout();
@@ -154,10 +156,10 @@
             // tsMain
             // 
             tsMain.Dock = DockStyle.None;
-            tsMain.Items.AddRange(new ToolStripItem[] { tsbOpen, tsbSave, tsbClose, toolStripSeparator1, tslZoom, tscbxZoom, tsbFitWidth, toolStripSeparator2, tsbLayoutSingleColumn, tsbLayoutSingleRow, toolStripSeparator3, tsbPan, tsbSelectContent, tsbComment, tsbForms, tsbMarkupText, tsbSearch });
+            tsMain.Items.AddRange(new ToolStripItem[] { tsbOpen, tsbSave, tsbClose, toolStripSeparator1, tslZoom, tscbxZoom, tsbFitWidth, toolStripSeparator2, tsbLayoutSingleColumn, tsbLayoutSingleRow, toolStripSeparator3, tsbPan, tsbSelectContent, tsbComment, tsbForms, tsbMarkupText, tsbSearch, tssbSettings });
             tsMain.Location = new Point(3, 0);
             tsMain.Name = "tsMain";
-            tsMain.Size = new Size(425, 25);
+            tsMain.Size = new Size(488, 25);
             tsMain.TabIndex = 0;
             tsMain.Text = "toolStrip1";
             // 
@@ -418,6 +420,7 @@
             pdfView.AnnotationSelected += pdfView_AnnotationSelected;
             pdfView.AnnotationDeselected += pdfView_AnnotationDeselected;
             pdfView.BeforeAnnotationDelete += pdfView_BeforeAnnotationDelete;
+            pdfView.AnnotationToolTipContentRequested += pdfView_AnnotationToolTipContentRequested;
             // 
             // tsAnnotations
             // 
@@ -989,7 +992,7 @@
             // 
             cmsOpen.Items.AddRange(new ToolStripItem[] { tsmiOpenIncremental, tsmiOpenFull });
             cmsOpen.Name = "cmsOpen";
-            cmsOpen.Size = new Size(262, 70);
+            cmsOpen.Size = new Size(262, 48);
             // 
             // tsmiOpenIncremental
             // 
@@ -1004,6 +1007,26 @@
             tsmiOpenFull.Size = new Size(261, 22);
             tsmiOpenFull.Text = "Open file in full load mode";
             tsmiOpenFull.Click += tsmiOpenFull_Click;
+            // 
+            // tssbSettings
+            // 
+            tssbSettings.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            tssbSettings.DropDownItems.AddRange(new ToolStripItem[] { tsmiShowAnnotationTooltips });
+            tssbSettings.Image = (Image)resources.GetObject("tssbSettings.Image");
+            tssbSettings.ImageTransparentColor = Color.Transparent;
+            tssbSettings.Name = "tssbSettings";
+            tssbSettings.Size = new Size(32, 22);
+            tssbSettings.Text = "Settings";
+            tssbSettings.Click += tssbSettings_Click;
+            // 
+            // tsmiShowAnnotationTooltips
+            // 
+            tsmiShowAnnotationTooltips.CheckOnClick = true;
+            tsmiShowAnnotationTooltips.Image = (Image)resources.GetObject("tsmiShowAnnotationTooltips.Image");
+            tsmiShowAnnotationTooltips.Name = "tsmiShowAnnotationTooltips";
+            tsmiShowAnnotationTooltips.Size = new Size(207, 22);
+            tsmiShowAnnotationTooltips.Text = "Show annotation tooltips";
+            tsmiShowAnnotationTooltips.Click += tsmiShowAnnotationTooltips_Click;
             // 
             // AppForm
             // 
@@ -1128,6 +1151,8 @@
         private ContextMenuStrip cmsOpen;
         private ToolStripMenuItem tsmiOpenIncremental;
         private ToolStripMenuItem tsmiOpenFull;
+        private ToolStripSplitButton tssbSettings;
+        private ToolStripMenuItem tsmiShowAnnotationTooltips;
     }
 }
 

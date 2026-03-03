@@ -30,26 +30,26 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AppForm));
-            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance20 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
-            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance21 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
-            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance22 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
-            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance23 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
-            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance24 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
-            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance25 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
-            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance26 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
-            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance27 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
-            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance28 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
-            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance29 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
-            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance30 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
-            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance31 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
-            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance32 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
-            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance33 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
-            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance34 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
-            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance35 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
-            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance36 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
-            O2S.Components.PDF4NET.View.Layouts.PDFColumnBasedPageDisplayLayout pdfColumnBasedPageDisplayLayout2 = new O2S.Components.PDF4NET.View.Layouts.PDFColumnBasedPageDisplayLayout();
-            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance37 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
-            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance38 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
+            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance1 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
+            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance2 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
+            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance3 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
+            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance4 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
+            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance5 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
+            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance6 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
+            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance7 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
+            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance8 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
+            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance9 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
+            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance10 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
+            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance11 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
+            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance12 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
+            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance13 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
+            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance14 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
+            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance15 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
+            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance16 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
+            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance17 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
+            O2S.Components.PDF4NET.View.Layouts.PDFColumnBasedPageDisplayLayout pdfColumnBasedPageDisplayLayout1 = new O2S.Components.PDF4NET.View.Layouts.PDFColumnBasedPageDisplayLayout();
+            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance18 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
+            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance19 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
             this.tsMain = new System.Windows.Forms.ToolStrip();
             this.tsbOpen = new System.Windows.Forms.ToolStripButton();
             this.tsbSave = new System.Windows.Forms.ToolStripButton();
@@ -68,6 +68,8 @@
             this.tsbForms = new System.Windows.Forms.ToolStripButton();
             this.tsbMarkupText = new System.Windows.Forms.ToolStripButton();
             this.tsbSearch = new System.Windows.Forms.ToolStripButton();
+            this.tssbSettings = new System.Windows.Forms.ToolStripSplitButton();
+            this.tsmiShowAnnotationTooltips = new System.Windows.Forms.ToolStripMenuItem();
             this.tscApp = new System.Windows.Forms.ToolStripContainer();
             this.ssInfo = new System.Windows.Forms.StatusStrip();
             this.tsslFileName = new System.Windows.Forms.ToolStripStatusLabel();
@@ -171,10 +173,11 @@
             this.tsbComment,
             this.tsbForms,
             this.tsbMarkupText,
-            this.tsbSearch});
+            this.tsbSearch,
+            this.tssbSettings});
             this.tsMain.Location = new System.Drawing.Point(3, 0);
             this.tsMain.Name = "tsMain";
-            this.tsMain.Size = new System.Drawing.Size(425, 25);
+            this.tsMain.Size = new System.Drawing.Size(457, 25);
             this.tsMain.TabIndex = 0;
             this.tsMain.Text = "toolStrip1";
             // 
@@ -363,6 +366,28 @@
             this.tsbSearch.Text = "Search";
             this.tsbSearch.Click += new System.EventHandler(this.tsbSearch_Click);
             // 
+            // tssbSettings
+            // 
+            this.tssbSettings.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tssbSettings.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiShowAnnotationTooltips});
+            this.tssbSettings.Image = ((System.Drawing.Image)(resources.GetObject("tssbSettings.Image")));
+            this.tssbSettings.ImageTransparentColor = System.Drawing.Color.Transparent;
+            this.tssbSettings.Name = "tssbSettings";
+            this.tssbSettings.Size = new System.Drawing.Size(32, 22);
+            this.tssbSettings.Text = "Settings";
+            this.tssbSettings.ToolTipText = "Settings";
+            this.tssbSettings.Click += new System.EventHandler(this.tssbSettings_Click);
+            // 
+            // tsmiShowAnnotationTooltips
+            // 
+            this.tsmiShowAnnotationTooltips.CheckOnClick = true;
+            this.tsmiShowAnnotationTooltips.Image = ((System.Drawing.Image)(resources.GetObject("tsmiShowAnnotationTooltips.Image")));
+            this.tsmiShowAnnotationTooltips.Name = "tsmiShowAnnotationTooltips";
+            this.tsmiShowAnnotationTooltips.Size = new System.Drawing.Size(207, 22);
+            this.tsmiShowAnnotationTooltips.Text = "Show annotation tooltips";
+            this.tsmiShowAnnotationTooltips.Click += new System.EventHandler(this.tsmiShowAnnotationTooltips_Click);
+            // 
             // tscApp
             // 
             // 
@@ -409,36 +434,36 @@
             // 
             // pdfView
             // 
-            this.pdfView.AnnotationSelectionRectangleAppearance = pathVisualAppearance20;
+            this.pdfView.AnnotationSelectionRectangleAppearance = pathVisualAppearance1;
             this.pdfView.ContentPosition = new System.Drawing.Point(0, 0);
-            this.pdfView.DefaultCircleAnnotationAppearance = pathVisualAppearance21;
-            this.pdfView.DefaultCloudSquareAnnotationAppearance = pathVisualAppearance22;
-            this.pdfView.DefaultFileAttachmentAnnotationAppearance = pathVisualAppearance23;
-            this.pdfView.DefaultFormFieldAppearance = pathVisualAppearance24;
-            this.pdfView.DefaultFreeTextAnnotationAppearance = pathVisualAppearance25;
-            this.pdfView.DefaultHighlightAnnotationAppearance = pathVisualAppearance26;
-            this.pdfView.DefaultInkAnnotationAppearance = pathVisualAppearance27;
-            this.pdfView.DefaultLineAnnotationAppearance = pathVisualAppearance28;
-            this.pdfView.DefaultLinkAnnotationAppearance = pathVisualAppearance29;
-            this.pdfView.DefaultPolylineAnnotationAppearance = pathVisualAppearance30;
-            this.pdfView.DefaultRubberStampAnnotationAppearance = pathVisualAppearance31;
-            this.pdfView.DefaultSquareAnnotationAppearance = pathVisualAppearance32;
-            this.pdfView.DefaultSquigglyAnnotationAppearance = pathVisualAppearance33;
-            this.pdfView.DefaultStrikeoutAnnotationAppearance = pathVisualAppearance34;
-            this.pdfView.DefaultTextAnnotationAppearance = pathVisualAppearance35;
-            this.pdfView.DefaultUnderlineAnnotationAppearance = pathVisualAppearance36;
+            this.pdfView.DefaultCircleAnnotationAppearance = pathVisualAppearance2;
+            this.pdfView.DefaultCloudSquareAnnotationAppearance = pathVisualAppearance3;
+            this.pdfView.DefaultFileAttachmentAnnotationAppearance = pathVisualAppearance4;
+            this.pdfView.DefaultFormFieldAppearance = pathVisualAppearance5;
+            this.pdfView.DefaultFreeTextAnnotationAppearance = pathVisualAppearance6;
+            this.pdfView.DefaultHighlightAnnotationAppearance = pathVisualAppearance7;
+            this.pdfView.DefaultInkAnnotationAppearance = pathVisualAppearance8;
+            this.pdfView.DefaultLineAnnotationAppearance = pathVisualAppearance9;
+            this.pdfView.DefaultLinkAnnotationAppearance = pathVisualAppearance10;
+            this.pdfView.DefaultPolylineAnnotationAppearance = pathVisualAppearance11;
+            this.pdfView.DefaultRubberStampAnnotationAppearance = pathVisualAppearance12;
+            this.pdfView.DefaultSquareAnnotationAppearance = pathVisualAppearance13;
+            this.pdfView.DefaultSquigglyAnnotationAppearance = pathVisualAppearance14;
+            this.pdfView.DefaultStrikeoutAnnotationAppearance = pathVisualAppearance15;
+            this.pdfView.DefaultTextAnnotationAppearance = pathVisualAppearance16;
+            this.pdfView.DefaultUnderlineAnnotationAppearance = pathVisualAppearance17;
             this.pdfView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pdfView.Document = this.pdfDocument;
             this.pdfView.GraphicRendererFactory = null;
             this.pdfView.Location = new System.Drawing.Point(0, 0);
             this.pdfView.Name = "pdfView";
-            this.pdfView.PageDisplayLayout = pdfColumnBasedPageDisplayLayout2;
-            this.pdfView.SelectionRectangleAppearance = pathVisualAppearance37;
+            this.pdfView.PageDisplayLayout = pdfColumnBasedPageDisplayLayout1;
+            this.pdfView.SelectionRectangleAppearance = pathVisualAppearance18;
             this.pdfView.Size = new System.Drawing.Size(1584, 714);
             this.pdfView.TabIndex = 0;
             this.pdfView.Text = "DocumentView";
             this.pdfView.TextSearchResultColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.pdfView.TextSelectionAppearance = pathVisualAppearance38;
+            this.pdfView.TextSelectionAppearance = pathVisualAppearance19;
             this.pdfView.UserInteractionMode = O2S.Components.PDF4NET.View.PDFUserInteractionMode.PanAndScan;
             this.pdfView.ZoomChanged += new System.EventHandler<System.EventArgs>(this.pdfView_ZoomChanged);
             this.pdfView.ZoomModeChanged += new System.EventHandler<System.EventArgs>(this.pdfView_ZoomModeChanged);
@@ -447,6 +472,7 @@
             this.pdfView.AnnotationSelected += new System.EventHandler<O2S.Components.PDF4NET.View.PDFVisualAnnotationEventArgs>(this.pdfView_AnnotationSelected);
             this.pdfView.AnnotationDeselected += new System.EventHandler<O2S.Components.PDF4NET.View.PDFVisualAnnotationEventArgs>(this.pdfView_AnnotationDeselected);
             this.pdfView.BeforeAnnotationDelete += new System.EventHandler<O2S.Components.PDF4NET.View.PDFVisualAnnotationDeleteEventArgs>(this.pdfView_BeforeAnnotationDelete);
+            this.pdfView.AnnotationToolTipContentRequested += new System.EventHandler<O2S.Components.PDF4NET.View.PDFVisualAnnotationToolTipContentRequestedEventArgs>(this.pdfView_AnnotationToolTipContentRequested);
             // 
             // tsAnnotations
             // 
@@ -979,7 +1005,6 @@
             // 
             // tstbxSearch
             // 
-            this.tstbxSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tstbxSearch.Name = "tstbxSearch";
             this.tstbxSearch.Size = new System.Drawing.Size(100, 25);
             this.tstbxSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tstbxSearch_KeyPress);
@@ -1080,7 +1105,7 @@
             this.tsmiOpenIncremental,
             this.tsmiOpenFull});
             this.cmsOpen.Name = "cmsOpen";
-            this.cmsOpen.Size = new System.Drawing.Size(262, 70);
+            this.cmsOpen.Size = new System.Drawing.Size(262, 48);
             // 
             // tsmiOpenIncremental
             // 
@@ -1218,6 +1243,8 @@
         private System.Windows.Forms.ContextMenuStrip cmsOpen;
         private System.Windows.Forms.ToolStripMenuItem tsmiOpenIncremental;
         private System.Windows.Forms.ToolStripMenuItem tsmiOpenFull;
+        private System.Windows.Forms.ToolStripSplitButton tssbSettings;
+        private System.Windows.Forms.ToolStripMenuItem tsmiShowAnnotationTooltips;
     }
 }
 
