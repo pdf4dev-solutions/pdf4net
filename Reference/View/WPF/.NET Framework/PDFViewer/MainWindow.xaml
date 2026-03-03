@@ -22,6 +22,13 @@
             <MenuItem Header="Open in incremental mode" Command="{Binding OpenIncrementalPDFCommand}" />
             <MenuItem Header="Open in full mode" Command="{Binding OpenFullPDFCommand}" />
         </ContextMenu>
+        <ContextMenu x:Key="SettingsMenu">
+            <MenuItem Header="Show annotation tooltips" x:Name="miShowAnnotationToolTips" Click="miShowAnnotationToolTips_Click" >
+                <MenuItem.Icon>
+                    <Image Source="/Resources/Annotations.ToolTips.png" />
+                </MenuItem.Icon>
+            </MenuItem>
+        </ContextMenu>
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
@@ -80,6 +87,9 @@
                 <ToggleButton x:Name="btnSearch" Command="{Binding SearchCommand}">
                     <Image Source="/Resources/Search.png" Style="{StaticResource ImageDisabled}"/>
                 </ToggleButton>
+                <Button Command="{Binding SettingsCommand}" x:Name="btnSettings">
+                    <Image Source="/Resources/Settings.png" />
+                </Button>
             </ToolBar>
             <ToolBar Band="2" BandIndex="1" Visibility="{Binding IsChecked, Converter={StaticResource btv}, ElementName=btnComment}">
                 <ToggleButton x:Name="btnAnnotationsEdit" Command="{Binding EditAnnotationsCommand}">
@@ -247,6 +257,7 @@
             UserInteractionModeChanged="documentView_UserInteractionModeChanged"
             AnnotationSelected="documentView_AnnotationSelected"
             AnnotationDeselected="documentView_AnnotationDeselected"
+            AnnotationToolTipContentRequested="documentView_AnnotationToolTipContentRequested"
             BeforePageDelete="documentView_BeforePageDelete"
             BeforeAnnotationDelete="documentView_BeforeAnnotationDelete"
             />

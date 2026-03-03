@@ -31,6 +31,7 @@
     <None Remove="Resources\Annotations.RubberStamp.png" />
     <None Remove="Resources\Annotations.Square.png" />
     <None Remove="Resources\Annotations.Text.png" />
+    <None Remove="Resources\Annotations.ToolTips.png" />
     <None Remove="Resources\File.Annotations.png" />
     <None Remove="Resources\File.Close.png" />
     <None Remove="Resources\File.FitWidth.png" />
@@ -73,6 +74,7 @@
     <None Remove="Resources\MatchWholeWord.png" />
     <None Remove="Resources\RegularExpression.png" />
     <None Remove="Resources\Search.png" />
+    <None Remove="Resources\Settings.png" />
     <None Remove="Resources\Text.Highlight.png" />
     <None Remove="Resources\Text.Squiggly.png" />
     <None Remove="Resources\Text.Strikeout.png" />

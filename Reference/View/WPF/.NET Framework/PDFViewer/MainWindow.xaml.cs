@@ -1,5 +1,8 @@
 ﻿using Microsoft.Win32;
 using O2S.Components.PDF4NET;
+using O2S.Components.PDF4NET.Actions;
+using O2S.Components.PDF4NET.Annotations;
+using O2S.Components.PDF4NET.Destinations;
 using O2S.Components.PDF4NET.View;
 using O2S.Components.PDF4NET.View.Content;
 using O2S.Components.PDF4NET.View.Layouts;
@@ -268,6 +271,35 @@ namespace PDFViewer
             btnLayoutSingleRow.IsChecked = IsSingleRowLayout;
         }
 
+        private ICommand settingsCommand;
+        public ICommand SettingsCommand
+        {
+            get
+            {
+                return settingsCommand ?? (settingsCommand = new CommandHandler(() => SettingsCommandExecute(), () => SettingsCommandCanExecute));
+            }
+        }
+
+        public bool SettingsCommandCanExecute
+        {
+            get { return true; }
+        }
+
+        public void SettingsCommandExecute()
+        {
+            ContextMenu openCtxMenu = FindResource("SettingsMenu") as ContextMenu;
+            openCtxMenu.PlacementTarget = btnSettings;
+            openCtxMenu.Placement = System.Windows.Controls.Primitives.PlacementMode.Bottom;
+            openCtxMenu.IsOpen = true;
+        }
+
+        private void miShowAnnotationToolTips_Click(object sender, RoutedEventArgs e)
+        {
+            MenuItem miShowAnnotationToolTips = sender as MenuItem;
+            miShowAnnotationToolTips.IsChecked = !miShowAnnotationToolTips.IsChecked;
+            documentView.AnnotationToolTips = miShowAnnotationToolTips.IsChecked ? new PDFVisualAnnotationToolTip() : null;
+        }
+
         private void documentView_UserInteractionModeChanged(object sender, EventArgs e)
         {
             btnAnnotationsEdit.IsChecked = documentView.UserInteractionMode == PDFUserInteractionMode.EditAnnotations;
@@ -308,6 +340,52 @@ namespace PDFViewer
         private void documentView_BeforeAnnotationDelete(object sender, PDFVisualAnnotationDeleteEventArgs e)
         {
             e.AllowDelete = MessageBox.Show("Are you sure you want to delete the selected annotation?", "PDF4NET - PDF Viewer", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes;
+        }
+
+        private void documentView_AnnotationToolTipContentRequested(object sender, PDFVisualAnnotationToolTipContentRequestedEventArgs e)
+        {
+            if (e.VisualAnnotation.Annotation.Type == PDFAnnotationType.Link)
+            {
+                PDFLinkAnnotation la = e.VisualAnnotation.Annotation as PDFLinkAnnotation;
+                PDFUriAction uriAction = la.Action as PDFUriAction;
+                if (uriAction != null)
+                {
+                    e.Title = "";
+                    e.Contents = $"Link: {uriAction.URI}";
+                }
+                else
+                {
+                    PDFDestination linkDestination = la.Destination;
+                    if (linkDestination == null)
+                    {
+                        PDFGoToAction goToAction = la.Action as PDFGoToAction;
+                        if (goToAction != null)
+                        {
+                            linkDestination = goToAction.Destination;
+                        }
+                    }
+
+                    if (linkDestination != null)
+                    {
+                        e.Title = "";
+                        switch (linkDestination.Type)
+                        {
+                            case PDFDestinationType.PageDestination:
+                                PDFPageDirectDestination pageDestination = linkDestination as PDFPageDirectDestination;
+                                e.Contents = $"Destination page: {documentView.Document.FixedDocument.Pages.IndexOf(pageDestination.Page) + 1}";
+                                break;
+                            case PDFDestinationType.PageNumberDestination:
+                                PDFPageNumberDestination pageNumberDestination = linkDestination as PDFPageNumberDestination;
+                                e.Contents = $"Destination page: {pageNumberDestination.PageNumber + 1}";
+                                break;
+                            case PDFDestinationType.NamedDestination:
+                                PDFNamedDestination namedDestination = linkDestination as PDFNamedDestination;
+                                e.Contents = $"Destination name: {namedDestination.Name}";
+                                break;
+                        }
+                    }
+                }
+            }
         }
 
         private void cbxZoom_SelectionChanged(object sender, SelectionChangedEventArgs e)
