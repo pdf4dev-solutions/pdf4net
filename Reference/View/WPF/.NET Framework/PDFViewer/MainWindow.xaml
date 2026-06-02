@@ -252,14 +252,55 @@
                 </ToggleButton>
             </ToolBar>
         </ToolBarTray>
-        <pdfView:PDFDocumentView x:Name="documentView" Grid.Row="1" Background="LightGray"
-            ZoomChanged="documentView_ZoomChanged"
-            UserInteractionModeChanged="documentView_UserInteractionModeChanged"
-            AnnotationSelected="documentView_AnnotationSelected"
-            AnnotationDeselected="documentView_AnnotationDeselected"
-            AnnotationToolTipContentRequested="documentView_AnnotationToolTipContentRequested"
-            BeforePageDelete="documentView_BeforePageDelete"
-            BeforeAnnotationDelete="documentView_BeforeAnnotationDelete"
+		<Grid Grid.Row="1" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <TabControl Grid.Column="0">
+                <TabItem ToolTip="Page thumbnails">
+                    <TabItem.Header>
+                        <Image Height="16" Width="16" Source="/Resources/Tab.Thumbnails.png" />
+                    </TabItem.Header>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <ToolBarTray Grid.Row="0">
+                            <ToolBar Band="1" BandIndex="1">
+                                <Button Command="{Binding ThumbnailsRotate90CCWCommand}" ToolTip="Rotate left">
+                                    <Image Source="/Resources/Thumbnails.Rotate90CCW.png" Style="{StaticResource ImageDisabled}" />
+                                </Button>
+                                <Button Command="{Binding ThumbnailsRotate90CWCommand}" ToolTip="Rotate right">
+                                    <Image Source="/Resources/Thumbnails.Rotate90CW.png" Style="{StaticResource ImageDisabled}" />
+                                </Button>
+                                <Button Command="{Binding ThumbnailsDeleteCommand}" ToolTip="Delete">
+                                    <Image Source="/Resources/Delete.png" Style="{StaticResource ImageDisabled}" />
+                                </Button>
+                            </ToolBar>
+                        </ToolBarTray>
+                        <pdfView:PDFThumbnailsView x:Name="thumbnailsView" Grid.Row="1" 
+                            Background="LightGray" Zoom="100" DocumentView="{Binding ElementName=documentView}" 
+                            BeforePageDelete="thumbnailsView_BeforePageDelete"
+                        />
+                    </Grid>
+                </TabItem>
+            </TabControl>
+            <GridSplitter Background="#969696"  ResizeDirection="Columns" Grid.Column="1" Width="5"
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
+                ResizeBehavior="PreviousAndNext" 
             />
+			<pdfView:PDFDocumentView x:Name="documentView" Grid.Column="2" Background="LightGray"
+				ZoomChanged="documentView_ZoomChanged"
+				UserInteractionModeChanged="documentView_UserInteractionModeChanged"
+				AnnotationSelected="documentView_AnnotationSelected"
+				AnnotationDeselected="documentView_AnnotationDeselected"
+				AnnotationToolTipContentRequested="documentView_AnnotationToolTipContentRequested"
+				BeforePageDelete="documentView_BeforePageDelete"
+				BeforeAnnotationDelete="documentView_BeforeAnnotationDelete"
+			/>
+		</Grid>
     </Grid>
 </Window>

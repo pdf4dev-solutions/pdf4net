@@ -10,7 +10,7 @@ The [**PDF4NET**](https://pdf4dev.com/pdf4net/overview.htm) library is licensed 
 
 The main features of [**PDF4NET**](https://pdf4dev.com/pdf4net/overview.htm) library are outlined below:
 
-##### SUPPORTED PLATFORMS	 
+### SUPPORTED PLATFORMS	 
   - .NET Framework 4.x	
   - .NET 5 / 6 / 7 / 8 / 9 / 10
   - Windows Forms	
@@ -26,7 +26,7 @@ The main features of [**PDF4NET**](https://pdf4dev.com/pdf4net/overview.htm) lib
   - .NET Core 2.x / 3.x
   - .NET Standard
 
-##### DOCUMENT FEATURES	 
+### DOCUMENT FEATURES	 
  
   - Create and load PDF documents from files and streams	
   - Convert PDF documents to images	(see **PDF RENDERING** below)
@@ -54,7 +54,7 @@ The main features of [**PDF4NET**](https://pdf4dev.com/pdf4net/overview.htm) lib
   - Document incremental updates	
   - Partial document loading and saving	
  
-##### LOGICAL STRUCTURE & TAGGED PDF & ACCESSIBILITY	 
+### LOGICAL STRUCTURE & TAGGED PDF & ACCESSIBILITY	 
  
   - Logical document structure	
   - Tagged PDF	
@@ -67,7 +67,7 @@ The main features of [**PDF4NET**](https://pdf4dev.com/pdf4net/overview.htm) lib
   - Automatic tagging of flow documents	
   - Extraction of page content with associated logical structure information
  
-##### FLOW DOCUMENT FEATURES	 
+### FLOW DOCUMENT FEATURES	 
  
   - Mixed formatted text	
   - Left-to-Right and Right-to-Left text 
@@ -82,7 +82,7 @@ The main features of [**PDF4NET**](https://pdf4dev.com/pdf4net/overview.htm) lib
   - Automatic tagging for accessibility	
   - Before/After draw events for flow content	
  
-##### SECURITY	 
+### SECURITY	 
  
   - User and owner passwords	
   - Document access rights	
@@ -91,7 +91,7 @@ The main features of [**PDF4NET**](https://pdf4dev.com/pdf4net/overview.htm) lib
   - Content redaction	
   - Disable text copy/paste	
  
-##### DIGITAL SIGNATURES	 
+### DIGITAL SIGNATURES	 
  
   - Approval and certifying digital signatures with X509 certificates	
   - Basic CMS and PAdES digital signatures with SHA256 / SHA384 / SHA512	
@@ -107,7 +107,7 @@ The main features of [**PDF4NET**](https://pdf4dev.com/pdf4net/overview.htm) lib
   - Extract the certificate from digital signatures
   - Save the signed copy of a PDF document 
 
-##### GRAPHICS FEATURES	 
+### GRAPHICS FEATURES	 
  
   - Grid layout for fixed content positioning	
   - Flow layout for relative content positioning	
@@ -132,7 +132,7 @@ The main features of [**PDF4NET**](https://pdf4dev.com/pdf4net/overview.htm) lib
   - Formatted content (paragraphs, text blocks, styled text, links inside text, bullet lists)	
   - Tables (simple and composite cells, column spans, row spans, borders)	
  
-##### FONTS	 
+### FONTS	 
  
   - Standard PDF fonts, Western and CJK	
   - Type1 fonts	
@@ -146,7 +146,7 @@ The main features of [**PDF4NET**](https://pdf4dev.com/pdf4net/overview.htm) lib
     - Small capitals
     - Old style figures
  
-##### COMPLEX SCRIPTS
+### COMPLEX SCRIPTS
  
   - Left-to-Right and Right-to-Left text
   - Complex scripts:	
@@ -172,7 +172,7 @@ The main features of [**PDF4NET**](https://pdf4dev.com/pdf4net/overview.htm) lib
     - Urdu	
     - Uyghur 
    
-##### IMAGES	 
+### IMAGES	 
  
   - Load images from files and streams	
   - Png, Gif, Jpeg, Jpeg2000, Tiff and Raw images	
@@ -185,7 +185,7 @@ The main features of [**PDF4NET**](https://pdf4dev.com/pdf4net/overview.htm) lib
   - Alternate images for printing	
   - SVG to PDF conversion	
  
-##### BARCODES	 
+### BARCODES	 
  
   - Built in vector barcode engine, no barcode images or barcode fonts	
   - Unidimensional barcodes:	
@@ -196,7 +196,7 @@ The main features of [**PDF4NET**](https://pdf4dev.com/pdf4net/overview.htm) lib
   - Bidimensional barcodes:	
     - DataMatrix, QR, PDF417, Micro PDF417, Codablock F, Code 16K	
  
-##### PDF ANNOTATIONS	 
+### PDF ANNOTATIONS	 
  
   - Add, edit and remove PDF annotations	
   - Standard and custom appearance for annotations	
@@ -221,7 +221,7 @@ The main features of [**PDF4NET**](https://pdf4dev.com/pdf4net/overview.htm) lib
     - 3D annotations with support for: views, projections, lighting schemes,
       cross sections, backgrounds and animations	
  
-##### PDF FORMS (Acrobat forms)	 
+### PDF FORMS (Acrobat forms)	 
  
   - Create, load and save PDF forms	
   - Add, edit, remove and rename form fields	
@@ -233,7 +233,7 @@ The main features of [**PDF4NET**](https://pdf4dev.com/pdf4net/overview.htm) lib
   - Flatten form fields	
   - Form actions (see PDF actions)	
  
-##### PDF ACTIONS	 
+### PDF ACTIONS	 
  
   - Add, edit and remove PDF actions	
   - Set actions at document level, page level, annotation level and form field level	
@@ -249,18 +249,18 @@ The main features of [**PDF4NET**](https://pdf4dev.com/pdf4net/overview.htm) lib
     - Reset form actions - reset form fields to default values	
     - Hide actions - show or hide form fields	
  
-##### PDF FUNCTIONS	 
+### PDF FUNCTIONS	 
  
   - Sample based functions (Type 0)	
   - Exponential functions (Type 2)	
   - Stitching functions (Type 3)	
   - Postscript calculator functions (Type 4)	
  
-##### TEXT SEARCH	 
+### TEXT SEARCH	 
  
   - Search text in PDF pages with support for regular search, case sensitive search, whole word search and regular expression search	
  
-##### CONTENT EXTRACTION	 
+### CONTENT EXTRACTION	 
  
   - Extract text with position information at fragment level and glyph level	
   - Extract text as words with position information at word level and glyph level	
@@ -270,7 +270,7 @@ The main features of [**PDF4NET**](https://pdf4dev.com/pdf4net/overview.htm) lib
   - Extract optional content groups as vector drawings	
   - Extract page content as vector drawings	
  
-##### CONTENT TRANSFORMATION	 
+### CONTENT TRANSFORMATION	 
  
   - Convert page content to RGB	
   - Convert page content to CMYK	
@@ -281,25 +281,25 @@ The main features of [**PDF4NET**](https://pdf4dev.com/pdf4net/overview.htm) lib
   - Enhanced contextual information for path, text and image operators
   - High performance read-only page content analysis
  
-##### CONTENT REDACTION	 
+### CONTENT REDACTION	 
  
   - Text redaction	
   - Image redaction	
   - Redaction annotations	
  
-##### PDF PORTFOLIOS	 
+### PDF PORTFOLIOS	 
  
   - Create and load PDF portfolios	
   - Define portfolio attributes and define sort order for portfolio items	
   - Add and remove portfolio items	
   - Organize portfolio items into folders	
  
-##### LOW LEVEL COS API	 
+### LOW LEVEL COS API	 
  
   - Add, edit and remove COS objects	
   - Supported COS objects: strings, numbers, names, booleans, nulls, arrays, dictionaries and streams	
 
-##### PDF RENDERING (included in PDF4NET+Render package)	 
+### PDF RENDERING (included in PDF4NET+Render package)	 
  
   - Convert PDF pages to color, grayscale and black & white images
   - Convert PDF pages to RAW, PNG and TIFF (single and multi-page)
@@ -322,8 +322,13 @@ The main features of [**PDF4NET**](https://pdf4dev.com/pdf4net/overview.htm) lib
       - PDF patterns
       - PDF shadings (gradients)
 
-##### PDF VIEWING (included in PDF4NET+Render package)	 
+### PDF VIEWING (included in PDF4NET+Render package)	 
 
+  - Included controls:
+    * PDFDocumentView - PDF viewer control for displaying and interacting with PDF files
+    * PDFThumbnailsView - PDF viewer control for displaying PDF page thumbnails
+	
+#### PDFDocumentView
   - Display PDF files in Windows Forms and WPF applications (.NET and .NET Framework supported)
   - Document zoom
     * Fixed value zoom (100%, 200%, etc)
@@ -395,12 +400,21 @@ The main features of [**PDF4NET**](https://pdf4dev.com/pdf4net/overview.htm) lib
       - Make same size
       - Distribute horizontally
       - Distribute vertically
+      - 
+#### PDFThumbnailsView
+  - Display PDF page thumbnails in Windows Forms and WPF applications (.NET and .NET Framework supported)
+  - Thumbnail zoom - adjust thumbnails size to desired size
+  - Flexible page layouts
+    * Column based layout - display thumbnails in multiple columns with dynamic columns support
+    * Row based - display thumbnails in multiple rows
+  - Pages management
+    * Rotate and delete pages using optional toolbar or context menu
  
-##### LICENSING	 
+### LICENSING	 
  
   - Per developer licensing with royalty free distribution	
 
-##### CLASS REFERENCE
+### CLASS REFERENCE
 
 [**PDF4NET**](https://pdf4dev.com/pdf4net/overview.htm) class reference is available here: [PDF4NET Class Reference](https://pdf4dev.com/pdf4net/help/pdf4net/webframe.html)
 

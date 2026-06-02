@@ -34,6 +34,8 @@ namespace PDFViewer
             InitDefaultApearances();
         }
 
+        private const string ApplicationName = "PDF4NET - PDF Viewer";
+
         private bool searchInitialized;
 
         private PDFVisualContentLocator contentLocator;
@@ -65,7 +67,6 @@ namespace PDFViewer
             pdfView.Dispose();
             pdfDocument.Dispose();
         }
-
 
         private void tsbOpen_Click(object sender, EventArgs e)
         {
@@ -123,7 +124,7 @@ namespace PDFViewer
 
         private void tscbxZoom_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if ((tscbxZoom.SelectedItem == null) ||
+            if ((tscbxZoom.SelectedItem == null ) || 
                 !int.TryParse(tscbxZoom.SelectedItem.ToString(), NumberStyles.Integer, CultureInfo.InvariantCulture, out int zoom))
             {
                 zoom = 100;
@@ -497,6 +498,39 @@ namespace PDFViewer
             pdfView.AnnotationToolTips = tsmiShowAnnotationTooltips.Checked ? new PDFVisualAnnotationToolTip() : null;
         }
 
+        private void tsbThumbnailsRotate90CCW_Click(object sender, EventArgs e)
+        {
+            int rotation = pdfDocument.Pages[thumbnailsView.PageNumber].Rotation;
+            rotation -= 90;
+            if (rotation < 0)
+            {
+                rotation += 360;
+            }
+            pdfDocument.Pages[thumbnailsView.PageNumber].Rotation = rotation;
+        }
+
+        private void tsbThumbnailsRotate90CW_Click(object sender, EventArgs e)
+        {
+            int rotation = pdfDocument.Pages[thumbnailsView.PageNumber].Rotation;
+            rotation += 90;
+            rotation %= 360;
+            pdfDocument.Pages[thumbnailsView.PageNumber].Rotation = rotation;
+        }
+
+        private void tsbThumbnailsDelete_Click(object sender, EventArgs e)
+        {
+            if (pdfDocument.Pages.Count == 1)
+            {
+                MessageBox.Show("Last page in the document cannot be deleted.", ApplicationName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            if (MessageBox.Show("Are you sure you want to delete the current page?", ApplicationName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                pdfDocument.Pages.RemoveAt(thumbnailsView.PageNumber);
+            }
+        }
+
         private void pdfView_UserInteractionModeChanged(object sender, EventArgs e)
         {
             tsbPan.Checked = pdfView.UserInteractionMode == PDFUserInteractionMode.PanAndScan;
@@ -555,12 +589,12 @@ namespace PDFViewer
 
         private void pdfView_BeforeAnnotationDelete(object sender, PDFVisualAnnotationDeleteEventArgs e)
         {
-            e.AllowDelete = MessageBox.Show("Are you sure you want to delete the selected annotation?", "PDF4NET - PDF Viewer", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes;
+            e.AllowDelete = MessageBox.Show("Are you sure you want to delete the selected annotation?", ApplicationName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes;
         }
 
         private void pdfView_BeforePageDelete(object sender, PDFVisualPageDeleteEventArgs e)
         {
-            e.AllowDelete = MessageBox.Show("Are you sure you want to delete the current page?", "PDF4NET - PDF Viewer", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes;
+            e.AllowDelete = MessageBox.Show("Are you sure you want to delete the current page?", ApplicationName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes;
         }
 
         private void pdfView_AnnotationToolTipContentRequested(object sender, PDFVisualAnnotationToolTipContentRequestedEventArgs e)
@@ -607,6 +641,11 @@ namespace PDFViewer
             }
         }
 
+        private void thumbnailsView_BeforePageDelete(object sender, PDFVisualPageDeleteEventArgs e)
+        {
+            e.AllowDelete = MessageBox.Show("Are you sure you want to delete the current page?", ApplicationName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes;
+        }
+
         private void EnableTools(bool enable)
         {
             tsbSave.Enabled = enable;
@@ -634,7 +673,7 @@ namespace PDFViewer
             }
         }
 
-        private void ToggleMultiTool(ToolStripButton multiTool, PDFUserInteractionMode userInteractionMode)
+        private void ToggleMultiTool (ToolStripButton multiTool, PDFUserInteractionMode userInteractionMode)
         {
             if (multiTool.Checked)
             {
@@ -698,6 +737,7 @@ namespace PDFViewer
         private void InitDefaultApearances()
         {
             pdfView.TextSelectionAppearance = new PathVisualAppearance(null, new SolidBrush(Color.FromArgb(128, Color.BlueViolet)));
+            pdfView.SelectionRectangleAppearance = new PathVisualAppearance(new Pen(Color.Blue, 1), new SolidBrush(Color.FromArgb(64, Color.LightBlue)));
             pdfView.AnnotationSelectionRectangleAppearance = new PathVisualAppearance(new Pen(Color.Blue, 1), new SolidBrush(Color.FromArgb(64, Color.LightBlue)));
 
             pdfView.DefaultTextAnnotationAppearance = new PathVisualAppearance(new Pen(Color.Black, 1), null);

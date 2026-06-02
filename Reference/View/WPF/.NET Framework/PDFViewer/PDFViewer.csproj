@@ -79,6 +79,7 @@
     <Compile Include="CommandHandler.cs" />
     <Compile Include="MainWindow.Commands.Comment.cs" />
     <Compile Include="MainWindow.Commands.EditForm.cs" />
+    <Compile Include="MainWindow.Commands.Thumbnails.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -176,6 +177,12 @@
     <Resource Include="Resources\Text.Squiggly.png" />
     <Resource Include="Resources\Text.Strikeout.png" />
     <Resource Include="Resources\Text.Underline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Delete.png" />
+    <Resource Include="Resources\Thumbnails.Rotate90CCW.png" />
+    <Resource Include="Resources\Thumbnails.Rotate90CW.png" />
+    <Resource Include="Resources\Tab.Thumbnails.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

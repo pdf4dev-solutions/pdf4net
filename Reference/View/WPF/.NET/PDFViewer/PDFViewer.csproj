@@ -15,74 +15,11 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
   </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="PDF4DEV.Components.PDF4NET.View.NET.Wpf" Version="16.3.0.0" />
+  </ItemGroup>
 
-  <ItemGroup>
-    <None Remove="Resources\Annotations.Circle.png" />
-    <None Remove="Resources\Annotations.CloudPolygon.png" />
-    <None Remove="Resources\Annotations.CloudSquare.png" />
-    <None Remove="Resources\Annotations.Edit.png" />
-    <None Remove="Resources\Annotations.FileAttachment.png" />
-    <None Remove="Resources\Annotations.FreeText.png" />
-    <None Remove="Resources\Annotations.Hyperlink.png" />
-    <None Remove="Resources\Annotations.Ink.png" />
-    <None Remove="Resources\Annotations.Line.png" />
-    <None Remove="Resources\Annotations.Polygon.png" />
-    <None Remove="Resources\Annotations.Polyline.png" />
-    <None Remove="Resources\Annotations.RubberStamp.png" />
-    <None Remove="Resources\Annotations.Square.png" />
-    <None Remove="Resources\Annotations.Text.png" />
-    <None Remove="Resources\Annotations.ToolTips.png" />
-    <None Remove="Resources\File.Annotations.png" />
-    <None Remove="Resources\File.Close.png" />
-    <None Remove="Resources\File.FitWidth.png" />
-    <None Remove="Resources\File.Forms.png" />
-    <None Remove="Resources\File.Open.png" />
-    <None Remove="Resources\File.PanAndScan.png" />
-    <None Remove="Resources\File.Save.png" />
-    <None Remove="Resources\File.SelectContent.png" />
-    <None Remove="Resources\FindNext.png" />
-    <None Remove="Resources\FindPrevious.png" />
-    <None Remove="Resources\FormDesigner.AlignBottom.png" />
-    <None Remove="Resources\FormDesigner.AlignCenter.png" />
-    <None Remove="Resources\FormDesigner.AlignLeft.png" />
-    <None Remove="Resources\FormDesigner.AlignMiddle.png" />
-    <None Remove="Resources\FormDesigner.AlignRight.png" />
-    <None Remove="Resources\FormDesigner.AlignTop.png" />
-    <None Remove="Resources\FormDesigner.CenterBoth.png" />
-    <None Remove="Resources\FormDesigner.CenterHorizontally.png" />
-    <None Remove="Resources\FormDesigner.CenterVertically.png" />
-    <None Remove="Resources\FormDesigner.DistributeHorizontally.png" />
-    <None Remove="Resources\FormDesigner.DistributeVertically.png" />
-    <None Remove="Resources\FormDesigner.MakeSameHeight.png" />
-    <None Remove="Resources\FormDesigner.MakeSameWidth.png" />
-    <None Remove="Resources\FormDesigner.MakeSameWidthAndHeight.png" />
-    <None Remove="Resources\FormField.Button.png" />
-    <None Remove="Resources\FormField.CheckBox.png" />
-    <None Remove="Resources\FormField.ComboBox.png" />
-    <None Remove="Resources\FormField.Edit.png" />
-    <None Remove="Resources\FormField.ListBox.png" />
-    <None Remove="Resources\FormField.RadioButton.png" />
-    <None Remove="Resources\FormField.Signature.png" />
-    <None Remove="Resources\FormField.TextBox.png" />
-    <None Remove="Resources\Layout.SingleColumn.png" />
-    <None Remove="Resources\Layout.SingleRow.png" />
-    <None Remove="Resources\LineSymbolEnd.24.png" />
-    <None Remove="Resources\LineSymbolEnd.36.png" />
-    <None Remove="Resources\LineSymbolEnd.48.png" />
-    <None Remove="Resources\MatchAccent.png" />
-    <None Remove="Resources\MatchCase.png" />
-    <None Remove="Resources\MatchWholeWord.png" />
-    <None Remove="Resources\RegularExpression.png" />
-    <None Remove="Resources\Search.png" />
-    <None Remove="Resources\Settings.png" />
-    <None Remove="Resources\Text.Highlight.png" />
-    <None Remove="Resources\Text.Squiggly.png" />
-    <None Remove="Resources\Text.Strikeout.png" />
-    <None Remove="Resources\Text.Underline.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="PDF4DEV.Components.PDF4NET.View.NET.Wpf" Version="16.2.0.0" />
-  </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Annotations.Circle.png" />
     <Resource Include="Resources\Annotations.CloudPolygon.png" />
@@ -141,6 +78,12 @@
     <Resource Include="Resources\Text.Squiggly.png" />
     <Resource Include="Resources\Text.Strikeout.png" />
     <Resource Include="Resources\Text.Underline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Delete.png" />
+    <Resource Include="Resources\Thumbnails.Rotate90CCW.png" />
+    <Resource Include="Resources\Thumbnails.Rotate90CW.png" />
+    <Resource Include="Resources\Tab.Thumbnails.png" />
   </ItemGroup>
 
 </Project>

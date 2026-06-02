@@ -27,9 +27,12 @@ namespace PDFViewer
 
             InitializeComponent();
             documentView.Document = visualDocument;
+            thumbnailsView.Document = visualDocument;
             contentLocator = new PDFVisualContentLocator(documentView);
             isSearchInitialized = false;
         }
+
+        private const string ApplicationName = "PDF4NET - PDF Viewer";
 
         private PDFVisualDocument visualDocument;
 
@@ -57,6 +60,7 @@ namespace PDFViewer
             documentView.Dispose();
             visualDocument.Dispose();
         }
+
         private ICommand openPDFCommand;
         public ICommand OpenPDFCommand
         {
@@ -269,6 +273,7 @@ namespace PDFViewer
             btnLayoutSingleColumn.IsChecked = IsSingleColumnLayout;
             btnLayoutSingleRow.IsChecked = IsSingleRowLayout;
         }
+
         private ICommand settingsCommand;
         public ICommand SettingsCommand
         {
@@ -330,14 +335,19 @@ namespace PDFViewer
             btnTextUnderline.IsChecked = documentView.UserInteractionMode == PDFUserInteractionMode.FlatUnderlineText;
         }
 
+        private void documentView_ZoomChanged(object sender, EventArgs e)
+        {
+            cbxZoom.Text = documentView.Zoom.ToString() + "%";
+        }
+
         private void documentView_BeforePageDelete(object sender, PDFVisualPageDeleteEventArgs e)
         {
-            e.AllowDelete = MessageBox.Show("Are you sure you want to delete the current page?", "PDF4NET - PDF Viewer", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes;
+            e.AllowDelete = MessageBox.Show("Are you sure you want to delete the current page?", ApplicationName, MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes;
         }
 
         private void documentView_BeforeAnnotationDelete(object sender, PDFVisualAnnotationDeleteEventArgs e)
         {
-            e.AllowDelete = MessageBox.Show("Are you sure you want to delete the selected annotation?", "PDF4NET - PDF Viewer", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes;
+            e.AllowDelete = MessageBox.Show("Are you sure you want to delete the selected annotation?", ApplicationName, MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes;
         }
 
         private void documentView_AnnotationToolTipContentRequested(object sender, PDFVisualAnnotationToolTipContentRequestedEventArgs e)
@@ -386,6 +396,11 @@ namespace PDFViewer
             }
         }
 
+        private void thumbnailsView_BeforePageDelete(object sender, PDFVisualPageDeleteEventArgs e)
+        {
+            e.AllowDelete = MessageBox.Show("Are you sure you want to delete the current page?", ApplicationName, MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes;
+        }
+
         private void cbxZoom_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (documentView != null)
@@ -405,11 +420,6 @@ namespace PDFViewer
             {
                 documentView.Zoom = GetZoom(cbxZoom.Text.Trim());
             }
-        }
-
-        private void documentView_ZoomChanged(object sender, EventArgs e)
-        {
-            cbxZoom.Text = documentView.Zoom.ToString() + "%";
         }
 
         private int GetZoom(string userZoom)
