@@ -325,8 +325,8 @@ The main features of [**PDF4NET**](https://pdf4dev.com/pdf4net/overview.htm) lib
 ### PDF VIEWING (included in PDF4NET+Render package)	 
 
   - Included controls:
-    * PDFDocumentView - PDF viewer control for displaying and interacting with PDF files
-    * PDFThumbnailsView - PDF viewer control for displaying PDF page thumbnails
+    * **PDFDocumentView** - PDF viewer control for displaying and interacting with PDF files
+    * **PDFThumbnailsView** - PDF viewer control for displaying PDF page thumbnails
 	
 #### PDFDocumentView
   - Display PDF files in Windows Forms and WPF applications (.NET and .NET Framework supported)
@@ -400,7 +400,7 @@ The main features of [**PDF4NET**](https://pdf4dev.com/pdf4net/overview.htm) lib
       - Make same size
       - Distribute horizontally
       - Distribute vertically
-      - 
+
 #### PDFThumbnailsView
   - Display PDF page thumbnails in Windows Forms and WPF applications (.NET and .NET Framework supported)
   - Thumbnail zoom - adjust thumbnails size to desired size
@@ -416,7 +416,7 @@ The main features of [**PDF4NET**](https://pdf4dev.com/pdf4net/overview.htm) lib
 
 ### CLASS REFERENCE
 
-[**PDF4NET**](https://pdf4dev.com/pdf4net/overview.htm) class reference is available here: [PDF4NET Class Reference](https://pdf4dev.com/pdf4net/help/pdf4net/webframe.html)
+[**PDF4NET**](https://pdf4dev.com/pdf4net/overview.htm) class reference is available here: [PDF4NET Class Reference](https://pdf4dev.com/pdf4net/reference/index.html)
 
 The classic Hello PDF sample looks like this with [**PDF4NET**](https://pdf4dev.com/pdf4net/overview.htm):
 ```
