@@ -279,11 +279,16 @@
                                 <Button Command="{Binding ThumbnailsDeleteCommand}" ToolTip="Delete">
                                     <Image Source="/Resources/Delete.png" Style="{StaticResource ImageDisabled}" />
                                 </Button>
+                                <Separator></Separator>
+                                <ToggleButton x:Name="tglbtnThumbnailsAllowPagesReorder" ToolTip="Allow pages reorder">
+                                    <Image Source="/Resources/Thumbnails.AllowPagesReorder.png" Style="{StaticResource ImageDisabled}" />
+                                </ToggleButton>
                             </ToolBar>
                         </ToolBarTray>
                         <pdfView:PDFThumbnailsView x:Name="thumbnailsView" Grid.Row="1" 
                             Background="LightGray" Zoom="100" DocumentView="{Binding ElementName=documentView}" 
                             BeforePageDelete="thumbnailsView_BeforePageDelete"
+                            AllowPagesReorder="{Binding IsChecked, ElementName=tglbtnThumbnailsAllowPagesReorder, Mode=TwoWay}"
                         />
                     </Grid>
                 </TabItem>

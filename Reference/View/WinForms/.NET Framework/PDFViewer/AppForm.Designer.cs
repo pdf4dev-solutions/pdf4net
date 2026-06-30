@@ -30,27 +30,27 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AppForm));
-            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance1 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
-            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance2 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
-            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance3 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
-            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance4 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
-            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance5 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
-            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance6 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
-            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance7 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
-            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance8 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
-            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance9 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
-            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance10 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
-            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance11 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
-            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance12 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
-            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance13 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
-            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance14 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
-            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance15 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
-            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance16 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
-            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance17 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
-            O2S.Components.PDF4NET.View.Layouts.PDFColumnBasedPageDisplayLayout pdfColumnBasedPageDisplayLayout1 = new O2S.Components.PDF4NET.View.Layouts.PDFColumnBasedPageDisplayLayout();
-            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance18 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
-            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance19 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
-            O2S.Components.PDF4NET.View.Layouts.PDFColumnBasedPageDisplayLayout pdfColumnBasedPageDisplayLayout2 = new O2S.Components.PDF4NET.View.Layouts.PDFColumnBasedPageDisplayLayout(0);
+            O2S.Components.PDF4NET.View.Layouts.PDFColumnBasedPageDisplayLayout pdfColumnBasedPageDisplayLayout1 = new O2S.Components.PDF4NET.View.Layouts.PDFColumnBasedPageDisplayLayout(0);
+            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance20 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
+            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance21 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
+            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance22 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
+            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance23 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
+            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance24 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
+            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance25 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
+            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance26 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
+            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance27 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
+            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance28 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
+            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance29 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
+            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance30 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
+            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance31 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
+            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance32 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
+            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance33 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
+            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance34 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
+            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance35 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
+            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance36 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
+            O2S.Components.PDF4NET.View.Layouts.PDFColumnBasedPageDisplayLayout pdfColumnBasedPageDisplayLayout3 = new O2S.Components.PDF4NET.View.Layouts.PDFColumnBasedPageDisplayLayout();
+            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance37 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
+            O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance38 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
             this.tsMain = new System.Windows.Forms.ToolStrip();
             this.tsbOpen = new System.Windows.Forms.ToolStripButton();
             this.tsbSave = new System.Windows.Forms.ToolStripButton();
@@ -74,7 +74,17 @@
             this.tscApp = new System.Windows.Forms.ToolStripContainer();
             this.ssInfo = new System.Windows.Forms.StatusStrip();
             this.tsslFileName = new System.Windows.Forms.ToolStripStatusLabel();
+            this.scViews = new System.Windows.Forms.SplitContainer();
+            this.tcAccessories = new System.Windows.Forms.TabControl();
+            this.tpThumbnails = new System.Windows.Forms.TabPage();
+            this.tsThumbnails = new System.Windows.Forms.ToolStrip();
+            this.tsbThumbnailsRotate90CCW = new System.Windows.Forms.ToolStripButton();
+            this.tsbThumbnailsRotate90CW = new System.Windows.Forms.ToolStripButton();
+            this.tsbThumbnailsDelete = new System.Windows.Forms.ToolStripButton();
+            this.thumbnailsView = new O2S.Components.PDF4NET.View.PDFThumbnailsView();
             this.pdfDocument = new O2S.Components.PDF4NET.View.PDFVisualDocument(this.components);
+            this.pdfView = new O2S.Components.PDF4NET.View.PDFDocumentView();
+            this.icons = new System.Windows.Forms.ImageList(this.components);
             this.tsAnnotations = new System.Windows.Forms.ToolStrip();
             this.tsbAnnotationsEdit = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
@@ -140,27 +150,14 @@
             this.cmsOpen = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsmiOpenIncremental = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiOpenFull = new System.Windows.Forms.ToolStripMenuItem();
-            this.scViews = new System.Windows.Forms.SplitContainer();
-            this.pdfView = new O2S.Components.PDF4NET.View.PDFDocumentView();
-            this.tcAccessories = new System.Windows.Forms.TabControl();
-            this.tpThumbnails = new System.Windows.Forms.TabPage();
-            this.icons = new System.Windows.Forms.ImageList(this.components);
-            this.thumbnailsView = new O2S.Components.PDF4NET.View.PDFThumbnailsView();
-            this.tsThumbnails = new System.Windows.Forms.ToolStrip();
-            this.tsbThumbnailsRotate90CCW = new System.Windows.Forms.ToolStripButton();
-            this.tsbThumbnailsRotate90CW = new System.Windows.Forms.ToolStripButton();
-            this.tsbThumbnailsDelete = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsbThumbnailsAllowPagesReorder = new System.Windows.Forms.ToolStripButton();
             this.tsMain.SuspendLayout();
             this.tscApp.BottomToolStripPanel.SuspendLayout();
             this.tscApp.ContentPanel.SuspendLayout();
             this.tscApp.TopToolStripPanel.SuspendLayout();
             this.tscApp.SuspendLayout();
             this.ssInfo.SuspendLayout();
-            this.tsAnnotations.SuspendLayout();
-            this.tsForms.SuspendLayout();
-            this.tsTextMarkup.SuspendLayout();
-            this.tsSearch.SuspendLayout();
-            this.cmsOpen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.scViews)).BeginInit();
             this.scViews.Panel1.SuspendLayout();
             this.scViews.Panel2.SuspendLayout();
@@ -168,6 +165,11 @@
             this.tcAccessories.SuspendLayout();
             this.tpThumbnails.SuspendLayout();
             this.tsThumbnails.SuspendLayout();
+            this.tsAnnotations.SuspendLayout();
+            this.tsForms.SuspendLayout();
+            this.tsTextMarkup.SuspendLayout();
+            this.tsSearch.SuspendLayout();
+            this.cmsOpen.SuspendLayout();
             this.SuspendLayout();
             // 
             // tsMain
@@ -448,6 +450,156 @@
             this.tsslFileName.Name = "tsslFileName";
             this.tsslFileName.Size = new System.Drawing.Size(81, 17);
             this.tsslFileName.Text = "No file loaded";
+            // 
+            // scViews
+            // 
+            this.scViews.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.scViews.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.scViews.Location = new System.Drawing.Point(0, 0);
+            this.scViews.Name = "scViews";
+            // 
+            // scViews.Panel1
+            // 
+            this.scViews.Panel1.Controls.Add(this.tcAccessories);
+            // 
+            // scViews.Panel2
+            // 
+            this.scViews.Panel2.Controls.Add(this.pdfView);
+            this.scViews.Size = new System.Drawing.Size(1584, 714);
+            this.scViews.SplitterDistance = 267;
+            this.scViews.TabIndex = 0;
+            // 
+            // tcAccessories
+            // 
+            this.tcAccessories.Controls.Add(this.tpThumbnails);
+            this.tcAccessories.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tcAccessories.ImageList = this.icons;
+            this.tcAccessories.Location = new System.Drawing.Point(0, 0);
+            this.tcAccessories.Name = "tcAccessories";
+            this.tcAccessories.SelectedIndex = 0;
+            this.tcAccessories.Size = new System.Drawing.Size(267, 714);
+            this.tcAccessories.TabIndex = 0;
+            // 
+            // tpThumbnails
+            // 
+            this.tpThumbnails.Controls.Add(this.tsThumbnails);
+            this.tpThumbnails.Controls.Add(this.thumbnailsView);
+            this.tpThumbnails.ImageIndex = 0;
+            this.tpThumbnails.Location = new System.Drawing.Point(4, 23);
+            this.tpThumbnails.Name = "tpThumbnails";
+            this.tpThumbnails.Padding = new System.Windows.Forms.Padding(3);
+            this.tpThumbnails.Size = new System.Drawing.Size(259, 687);
+            this.tpThumbnails.TabIndex = 0;
+            this.tpThumbnails.ToolTipText = "Page thumbnails";
+            this.tpThumbnails.UseVisualStyleBackColor = true;
+            // 
+            // tsThumbnails
+            // 
+            this.tsThumbnails.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbThumbnailsRotate90CCW,
+            this.tsbThumbnailsRotate90CW,
+            this.tsbThumbnailsDelete,
+            this.toolStripSeparator11,
+            this.tsbThumbnailsAllowPagesReorder});
+            this.tsThumbnails.Location = new System.Drawing.Point(3, 3);
+            this.tsThumbnails.Name = "tsThumbnails";
+            this.tsThumbnails.Size = new System.Drawing.Size(253, 25);
+            this.tsThumbnails.TabIndex = 1;
+            this.tsThumbnails.Text = "toolStrip1";
+            // 
+            // tsbThumbnailsRotate90CCW
+            // 
+            this.tsbThumbnailsRotate90CCW.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbThumbnailsRotate90CCW.Image = ((System.Drawing.Image)(resources.GetObject("tsbThumbnailsRotate90CCW.Image")));
+            this.tsbThumbnailsRotate90CCW.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbThumbnailsRotate90CCW.Name = "tsbThumbnailsRotate90CCW";
+            this.tsbThumbnailsRotate90CCW.Size = new System.Drawing.Size(23, 22);
+            this.tsbThumbnailsRotate90CCW.ToolTipText = "Rotate left";
+            this.tsbThumbnailsRotate90CCW.Click += new System.EventHandler(this.tsbThumbnailsRotate90CCW_Click);
+            // 
+            // tsbThumbnailsRotate90CW
+            // 
+            this.tsbThumbnailsRotate90CW.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbThumbnailsRotate90CW.Image = ((System.Drawing.Image)(resources.GetObject("tsbThumbnailsRotate90CW.Image")));
+            this.tsbThumbnailsRotate90CW.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbThumbnailsRotate90CW.Name = "tsbThumbnailsRotate90CW";
+            this.tsbThumbnailsRotate90CW.Size = new System.Drawing.Size(23, 22);
+            this.tsbThumbnailsRotate90CW.ToolTipText = "Rotate right";
+            this.tsbThumbnailsRotate90CW.Click += new System.EventHandler(this.tsbThumbnailsRotate90CW_Click);
+            // 
+            // tsbThumbnailsDelete
+            // 
+            this.tsbThumbnailsDelete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbThumbnailsDelete.Image = ((System.Drawing.Image)(resources.GetObject("tsbThumbnailsDelete.Image")));
+            this.tsbThumbnailsDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbThumbnailsDelete.Name = "tsbThumbnailsDelete";
+            this.tsbThumbnailsDelete.Size = new System.Drawing.Size(23, 22);
+            this.tsbThumbnailsDelete.ToolTipText = "Delete";
+            this.tsbThumbnailsDelete.Click += new System.EventHandler(this.tsbThumbnailsDelete_Click);
+            // 
+            // thumbnailsView
+            // 
+            this.thumbnailsView.AllowDrop = true;
+            this.thumbnailsView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.thumbnailsView.ContentPosition = new System.Drawing.Point(0, 0);
+            this.thumbnailsView.Document = this.pdfDocument;
+            this.thumbnailsView.DocumentView = this.pdfView;
+            this.thumbnailsView.GraphicRendererFactory = null;
+            this.thumbnailsView.Location = new System.Drawing.Point(1, 28);
+            this.thumbnailsView.Name = "thumbnailsView";
+            this.thumbnailsView.PageDisplayLayout = pdfColumnBasedPageDisplayLayout1;
+            this.thumbnailsView.Size = new System.Drawing.Size(255, 656);
+            this.thumbnailsView.TabIndex = 0;
+            this.thumbnailsView.BeforePageDelete += new System.EventHandler<O2S.Components.PDF4NET.View.PDFVisualPageDeleteEventArgs>(this.thumbnailsView_BeforePageDelete);
+            // 
+            // pdfView
+            // 
+            this.pdfView.AnnotationSelectionRectangleAppearance = pathVisualAppearance20;
+            this.pdfView.ContentPosition = new System.Drawing.Point(0, 0);
+            this.pdfView.DefaultCircleAnnotationAppearance = pathVisualAppearance21;
+            this.pdfView.DefaultCloudSquareAnnotationAppearance = pathVisualAppearance22;
+            this.pdfView.DefaultFileAttachmentAnnotationAppearance = pathVisualAppearance23;
+            this.pdfView.DefaultFormFieldAppearance = pathVisualAppearance24;
+            this.pdfView.DefaultFreeTextAnnotationAppearance = pathVisualAppearance25;
+            this.pdfView.DefaultHighlightAnnotationAppearance = pathVisualAppearance26;
+            this.pdfView.DefaultInkAnnotationAppearance = pathVisualAppearance27;
+            this.pdfView.DefaultLineAnnotationAppearance = pathVisualAppearance28;
+            this.pdfView.DefaultLinkAnnotationAppearance = pathVisualAppearance29;
+            this.pdfView.DefaultPolylineAnnotationAppearance = pathVisualAppearance30;
+            this.pdfView.DefaultRubberStampAnnotationAppearance = pathVisualAppearance31;
+            this.pdfView.DefaultSquareAnnotationAppearance = pathVisualAppearance32;
+            this.pdfView.DefaultSquigglyAnnotationAppearance = pathVisualAppearance33;
+            this.pdfView.DefaultStrikeoutAnnotationAppearance = pathVisualAppearance34;
+            this.pdfView.DefaultTextAnnotationAppearance = pathVisualAppearance35;
+            this.pdfView.DefaultUnderlineAnnotationAppearance = pathVisualAppearance36;
+            this.pdfView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pdfView.Document = this.pdfDocument;
+            this.pdfView.GraphicRendererFactory = null;
+            this.pdfView.Location = new System.Drawing.Point(0, 0);
+            this.pdfView.Name = "pdfView";
+            this.pdfView.PageDisplayLayout = pdfColumnBasedPageDisplayLayout3;
+            this.pdfView.SelectionRectangleAppearance = pathVisualAppearance37;
+            this.pdfView.Size = new System.Drawing.Size(1313, 714);
+            this.pdfView.TabIndex = 1;
+            this.pdfView.Text = "DocumentView";
+            this.pdfView.TextSearchResultColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.pdfView.TextSelectionAppearance = pathVisualAppearance38;
+            this.pdfView.UserInteractionMode = O2S.Components.PDF4NET.View.PDFUserInteractionMode.PanAndScan;
+            this.pdfView.ZoomChanged += new System.EventHandler<System.EventArgs>(this.pdfView_ZoomChanged);
+            this.pdfView.ZoomModeChanged += new System.EventHandler<System.EventArgs>(this.pdfView_ZoomModeChanged);
+            this.pdfView.UserInteractionModeChanged += new System.EventHandler<System.EventArgs>(this.pdfView_UserInteractionModeChanged);
+            this.pdfView.BeforePageDelete += new System.EventHandler<O2S.Components.PDF4NET.View.PDFVisualPageDeleteEventArgs>(this.pdfView_BeforePageDelete);
+            this.pdfView.AnnotationSelected += new System.EventHandler<O2S.Components.PDF4NET.View.PDFVisualAnnotationEventArgs>(this.pdfView_AnnotationSelected);
+            this.pdfView.AnnotationDeselected += new System.EventHandler<O2S.Components.PDF4NET.View.PDFVisualAnnotationEventArgs>(this.pdfView_AnnotationDeselected);
+            this.pdfView.BeforeAnnotationDelete += new System.EventHandler<O2S.Components.PDF4NET.View.PDFVisualAnnotationDeleteEventArgs>(this.pdfView_BeforeAnnotationDelete);
+            // 
+            // icons
+            // 
+            this.icons.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("icons.ImageStream")));
+            this.icons.TransparentColor = System.Drawing.Color.Transparent;
+            this.icons.Images.SetKeyName(0, "ThumbnailListView.png");
             // 
             // tsAnnotations
             // 
@@ -1097,152 +1249,21 @@
             this.tsmiOpenFull.Text = "Open file in full load mode";
             this.tsmiOpenFull.Click += new System.EventHandler(this.tsmiOpenFull_Click);
             // 
-            // scViews
+            // toolStripSeparator11
             // 
-            this.scViews.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scViews.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.scViews.Location = new System.Drawing.Point(0, 0);
-            this.scViews.Name = "scViews";
+            this.toolStripSeparator11.Name = "toolStripSeparator11";
+            this.toolStripSeparator11.Size = new System.Drawing.Size(6, 25);
             // 
-            // scViews.Panel1
+            // tsbThumbnailsAllowPagesReorder
             // 
-            this.scViews.Panel1.Controls.Add(this.tcAccessories);
-            // 
-            // scViews.Panel2
-            // 
-            this.scViews.Panel2.Controls.Add(this.pdfView);
-            this.scViews.Size = new System.Drawing.Size(1584, 714);
-            this.scViews.SplitterDistance = 267;
-            this.scViews.TabIndex = 0;
-            // 
-            // pdfView
-            // 
-            this.pdfView.AnnotationSelectionRectangleAppearance = pathVisualAppearance1;
-            this.pdfView.ContentPosition = new System.Drawing.Point(0, 0);
-            this.pdfView.DefaultCircleAnnotationAppearance = pathVisualAppearance2;
-            this.pdfView.DefaultCloudSquareAnnotationAppearance = pathVisualAppearance3;
-            this.pdfView.DefaultFileAttachmentAnnotationAppearance = pathVisualAppearance4;
-            this.pdfView.DefaultFormFieldAppearance = pathVisualAppearance5;
-            this.pdfView.DefaultFreeTextAnnotationAppearance = pathVisualAppearance6;
-            this.pdfView.DefaultHighlightAnnotationAppearance = pathVisualAppearance7;
-            this.pdfView.DefaultInkAnnotationAppearance = pathVisualAppearance8;
-            this.pdfView.DefaultLineAnnotationAppearance = pathVisualAppearance9;
-            this.pdfView.DefaultLinkAnnotationAppearance = pathVisualAppearance10;
-            this.pdfView.DefaultPolylineAnnotationAppearance = pathVisualAppearance11;
-            this.pdfView.DefaultRubberStampAnnotationAppearance = pathVisualAppearance12;
-            this.pdfView.DefaultSquareAnnotationAppearance = pathVisualAppearance13;
-            this.pdfView.DefaultSquigglyAnnotationAppearance = pathVisualAppearance14;
-            this.pdfView.DefaultStrikeoutAnnotationAppearance = pathVisualAppearance15;
-            this.pdfView.DefaultTextAnnotationAppearance = pathVisualAppearance16;
-            this.pdfView.DefaultUnderlineAnnotationAppearance = pathVisualAppearance17;
-            this.pdfView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pdfView.Document = this.pdfDocument;
-            this.pdfView.GraphicRendererFactory = null;
-            this.pdfView.Location = new System.Drawing.Point(0, 0);
-            this.pdfView.Name = "pdfView";
-            this.pdfView.PageDisplayLayout = pdfColumnBasedPageDisplayLayout1;
-            this.pdfView.SelectionRectangleAppearance = pathVisualAppearance18;
-            this.pdfView.Size = new System.Drawing.Size(1313, 714);
-            this.pdfView.TabIndex = 1;
-            this.pdfView.Text = "DocumentView";
-            this.pdfView.TextSearchResultColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.pdfView.TextSelectionAppearance = pathVisualAppearance19;
-            this.pdfView.UserInteractionMode = O2S.Components.PDF4NET.View.PDFUserInteractionMode.PanAndScan;
-            this.pdfView.ZoomChanged += new System.EventHandler<System.EventArgs>(this.pdfView_ZoomChanged);
-            this.pdfView.ZoomModeChanged += new System.EventHandler<System.EventArgs>(this.pdfView_ZoomModeChanged);
-            this.pdfView.UserInteractionModeChanged += new System.EventHandler<System.EventArgs>(this.pdfView_UserInteractionModeChanged);
-            this.pdfView.BeforePageDelete += new System.EventHandler<O2S.Components.PDF4NET.View.PDFVisualPageDeleteEventArgs>(this.pdfView_BeforePageDelete);
-            this.pdfView.AnnotationSelected += new System.EventHandler<O2S.Components.PDF4NET.View.PDFVisualAnnotationEventArgs>(this.pdfView_AnnotationSelected);
-            this.pdfView.AnnotationDeselected += new System.EventHandler<O2S.Components.PDF4NET.View.PDFVisualAnnotationEventArgs>(this.pdfView_AnnotationDeselected);
-            this.pdfView.BeforeAnnotationDelete += new System.EventHandler<O2S.Components.PDF4NET.View.PDFVisualAnnotationDeleteEventArgs>(this.pdfView_BeforeAnnotationDelete);
-            // 
-            // tcAccessories
-            // 
-            this.tcAccessories.Controls.Add(this.tpThumbnails);
-            this.tcAccessories.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tcAccessories.ImageList = this.icons;
-            this.tcAccessories.Location = new System.Drawing.Point(0, 0);
-            this.tcAccessories.Name = "tcAccessories";
-            this.tcAccessories.SelectedIndex = 0;
-            this.tcAccessories.Size = new System.Drawing.Size(267, 714);
-            this.tcAccessories.TabIndex = 0;
-            // 
-            // tpThumbnails
-            // 
-            this.tpThumbnails.Controls.Add(this.tsThumbnails);
-            this.tpThumbnails.Controls.Add(this.thumbnailsView);
-            this.tpThumbnails.ImageIndex = 0;
-            this.tpThumbnails.Location = new System.Drawing.Point(4, 23);
-            this.tpThumbnails.Name = "tpThumbnails";
-            this.tpThumbnails.Padding = new System.Windows.Forms.Padding(3);
-            this.tpThumbnails.Size = new System.Drawing.Size(259, 687);
-            this.tpThumbnails.TabIndex = 0;
-            this.tpThumbnails.ToolTipText = "Page thumbnails";
-            this.tpThumbnails.UseVisualStyleBackColor = true;
-            // 
-            // icons
-            // 
-            this.icons.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("icons.ImageStream")));
-            this.icons.TransparentColor = System.Drawing.Color.Transparent;
-            this.icons.Images.SetKeyName(0, "ThumbnailListView.png");
-            // 
-            // thumbnailsView
-            // 
-            this.thumbnailsView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.thumbnailsView.ContentPosition = new System.Drawing.Point(0, 0);
-            this.thumbnailsView.Document = this.pdfDocument;
-            this.thumbnailsView.DocumentView = this.pdfView;
-            this.thumbnailsView.GraphicRendererFactory = null;
-            this.thumbnailsView.Location = new System.Drawing.Point(1, 28);
-            this.thumbnailsView.Name = "thumbnailsView";
-            this.thumbnailsView.PageDisplayLayout = pdfColumnBasedPageDisplayLayout2;
-            this.thumbnailsView.Size = new System.Drawing.Size(255, 656);
-            this.thumbnailsView.TabIndex = 0;
-            this.thumbnailsView.BeforePageDelete += new System.EventHandler<O2S.Components.PDF4NET.View.PDFVisualPageDeleteEventArgs>(this.thumbnailsView_BeforePageDelete);
-            // 
-            // tsThumbnails
-            // 
-            this.tsThumbnails.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsbThumbnailsRotate90CCW,
-            this.tsbThumbnailsRotate90CW,
-            this.tsbThumbnailsDelete});
-            this.tsThumbnails.Location = new System.Drawing.Point(3, 3);
-            this.tsThumbnails.Name = "tsThumbnails";
-            this.tsThumbnails.Size = new System.Drawing.Size(253, 25);
-            this.tsThumbnails.TabIndex = 1;
-            this.tsThumbnails.Text = "toolStrip1";
-            // 
-            // tsbThumbnailsRotate90CCW
-            // 
-            this.tsbThumbnailsRotate90CCW.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbThumbnailsRotate90CCW.Image = ((System.Drawing.Image)(resources.GetObject("tsbThumbnailsRotate90CCW.Image")));
-            this.tsbThumbnailsRotate90CCW.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbThumbnailsRotate90CCW.Name = "tsbThumbnailsRotate90CCW";
-            this.tsbThumbnailsRotate90CCW.Size = new System.Drawing.Size(23, 22);
-            this.tsbThumbnailsRotate90CCW.ToolTipText = "Rotate left";
-            this.tsbThumbnailsRotate90CCW.Click += new System.EventHandler(this.tsbThumbnailsRotate90CCW_Click);
-            // 
-            // tsbThumbnailsRotate90CW
-            // 
-            this.tsbThumbnailsRotate90CW.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbThumbnailsRotate90CW.Image = ((System.Drawing.Image)(resources.GetObject("tsbThumbnailsRotate90CW.Image")));
-            this.tsbThumbnailsRotate90CW.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbThumbnailsRotate90CW.Name = "tsbThumbnailsRotate90CW";
-            this.tsbThumbnailsRotate90CW.Size = new System.Drawing.Size(23, 22);
-            this.tsbThumbnailsRotate90CW.ToolTipText = "Rotate right";
-            this.tsbThumbnailsRotate90CW.Click += new System.EventHandler(this.tsbThumbnailsRotate90CW_Click);
-            // 
-            // tsbThumbnailsDelete
-            // 
-            this.tsbThumbnailsDelete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbThumbnailsDelete.Image = ((System.Drawing.Image)(resources.GetObject("tsbThumbnailsDelete.Image")));
-            this.tsbThumbnailsDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbThumbnailsDelete.Name = "tsbThumbnailsDelete";
-            this.tsbThumbnailsDelete.Size = new System.Drawing.Size(23, 22);
-            this.tsbThumbnailsDelete.ToolTipText = "Delete";
-            this.tsbThumbnailsDelete.Click += new System.EventHandler(this.tsbThumbnailsDelete_Click);
+            this.tsbThumbnailsAllowPagesReorder.CheckOnClick = true;
+            this.tsbThumbnailsAllowPagesReorder.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbThumbnailsAllowPagesReorder.Image = ((System.Drawing.Image)(resources.GetObject("tsbThumbnailsAllowPagesReorder.Image")));
+            this.tsbThumbnailsAllowPagesReorder.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbThumbnailsAllowPagesReorder.Name = "tsbThumbnailsAllowPagesReorder";
+            this.tsbThumbnailsAllowPagesReorder.Size = new System.Drawing.Size(23, 22);
+            this.tsbThumbnailsAllowPagesReorder.Text = "Allow pages reorder";
+            this.tsbThumbnailsAllowPagesReorder.CheckedChanged += new System.EventHandler(this.tsbThumbnailsAllowPagesReorder_CheckedChanged);
             // 
             // AppForm
             // 
@@ -1263,15 +1284,6 @@
             this.tscApp.PerformLayout();
             this.ssInfo.ResumeLayout(false);
             this.ssInfo.PerformLayout();
-            this.tsAnnotations.ResumeLayout(false);
-            this.tsAnnotations.PerformLayout();
-            this.tsForms.ResumeLayout(false);
-            this.tsForms.PerformLayout();
-            this.tsTextMarkup.ResumeLayout(false);
-            this.tsTextMarkup.PerformLayout();
-            this.tsSearch.ResumeLayout(false);
-            this.tsSearch.PerformLayout();
-            this.cmsOpen.ResumeLayout(false);
             this.scViews.Panel1.ResumeLayout(false);
             this.scViews.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.scViews)).EndInit();
@@ -1281,6 +1293,15 @@
             this.tpThumbnails.PerformLayout();
             this.tsThumbnails.ResumeLayout(false);
             this.tsThumbnails.PerformLayout();
+            this.tsAnnotations.ResumeLayout(false);
+            this.tsAnnotations.PerformLayout();
+            this.tsForms.ResumeLayout(false);
+            this.tsForms.PerformLayout();
+            this.tsTextMarkup.ResumeLayout(false);
+            this.tsTextMarkup.PerformLayout();
+            this.tsSearch.ResumeLayout(false);
+            this.tsSearch.PerformLayout();
+            this.cmsOpen.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1386,6 +1407,8 @@
         private System.Windows.Forms.ToolStripButton tsbThumbnailsRotate90CCW;
         private System.Windows.Forms.ToolStripButton tsbThumbnailsRotate90CW;
         private System.Windows.Forms.ToolStripButton tsbThumbnailsDelete;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator11;
+        private System.Windows.Forms.ToolStripButton tsbThumbnailsAllowPagesReorder;
     }
 }
 

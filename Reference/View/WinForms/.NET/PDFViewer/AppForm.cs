@@ -124,7 +124,7 @@ namespace PDFViewer
 
         private void tscbxZoom_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if ((tscbxZoom.SelectedItem == null ) || 
+            if ((tscbxZoom.SelectedItem == null) ||
                 !int.TryParse(tscbxZoom.SelectedItem.ToString(), NumberStyles.Integer, CultureInfo.InvariantCulture, out int zoom))
             {
                 zoom = 100;
@@ -531,6 +531,11 @@ namespace PDFViewer
             }
         }
 
+        private void tsbThumbnailsAllowPagesReorder_CheckedChanged(object sender, EventArgs e)
+        {
+            thumbnailsView.AllowPagesReorder = tsbThumbnailsAllowPagesReorder.Checked;
+        }
+
         private void pdfView_UserInteractionModeChanged(object sender, EventArgs e)
         {
             tsbPan.Checked = pdfView.UserInteractionMode == PDFUserInteractionMode.PanAndScan;
@@ -673,7 +678,7 @@ namespace PDFViewer
             }
         }
 
-        private void ToggleMultiTool (ToolStripButton multiTool, PDFUserInteractionMode userInteractionMode)
+        private void ToggleMultiTool(ToolStripButton multiTool, PDFUserInteractionMode userInteractionMode)
         {
             if (multiTool.Checked)
             {

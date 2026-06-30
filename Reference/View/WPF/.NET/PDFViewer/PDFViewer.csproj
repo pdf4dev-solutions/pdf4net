@@ -17,7 +17,7 @@
   </PropertyGroup>
   
   <ItemGroup>
-    <PackageReference Include="PDF4DEV.Components.PDF4NET.View.NET.Wpf" Version="16.3.0.0" />
+    <PackageReference Include="PDF4DEV.Components.PDF4NET.View.NET.Wpf" Version="16.3.1.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -81,6 +81,7 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Delete.png" />
+    <Resource Include="Resources\Thumbnails.AllowPagesReorder.png" />
     <Resource Include="Resources\Thumbnails.Rotate90CCW.png" />
     <Resource Include="Resources\Thumbnails.Rotate90CW.png" />
     <Resource Include="Resources\Tab.Thumbnails.png" />

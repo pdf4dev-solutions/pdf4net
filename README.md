@@ -409,6 +409,7 @@ The main features of [**PDF4NET**](https://pdf4dev.com/pdf4net/overview.htm) lib
     * Row based - display thumbnails in multiple rows
   - Pages management
     * Rotate and delete pages using optional toolbar or context menu
+    * Reorder pages using drag & drop
  
 ### LICENSING	 
  

@@ -180,6 +180,7 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Delete.png" />
+    <Resource Include="Resources\Thumbnails.AllowPagesReorder.png" />
     <Resource Include="Resources\Thumbnails.Rotate90CCW.png" />
     <Resource Include="Resources\Thumbnails.Rotate90CW.png" />
     <Resource Include="Resources\Tab.Thumbnails.png" />

@@ -531,6 +531,11 @@ namespace PDFViewer
             }
         }
 
+        private void tsbThumbnailsAllowPagesReorder_CheckedChanged(object sender, EventArgs e)
+        {
+            thumbnailsView.AllowPagesReorder = tsbThumbnailsAllowPagesReorder.Checked;
+        }
+
         private void pdfView_UserInteractionModeChanged(object sender, EventArgs e)
         {
             tsbPan.Checked = pdfView.UserInteractionMode == PDFUserInteractionMode.PanAndScan;

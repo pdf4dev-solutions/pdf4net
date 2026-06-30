@@ -84,6 +84,7 @@
             thumbnailsView = new O2S.Components.PDF4NET.View.PDFThumbnailsView();
             pdfDocument = new O2S.Components.PDF4NET.View.PDFVisualDocument(components);
             pdfView = new O2S.Components.PDF4NET.View.PDFDocumentView();
+            icons = new ImageList(components);
             tsAnnotations = new ToolStrip();
             tsbAnnotationsEdit = new ToolStripButton();
             toolStripSeparator4 = new ToolStripSeparator();
@@ -149,7 +150,8 @@
             cmsOpen = new ContextMenuStrip(components);
             tsmiOpenIncremental = new ToolStripMenuItem();
             tsmiOpenFull = new ToolStripMenuItem();
-            icons = new ImageList(components);
+            toolStripSeparator11 = new ToolStripSeparator();
+            tsbThumbnailsAllowPagesReorder = new ToolStripButton();
             tsMain.SuspendLayout();
             tscApp.BottomToolStripPanel.SuspendLayout();
             tscApp.ContentPanel.SuspendLayout();
@@ -465,7 +467,7 @@
             // 
             // tsThumbnails
             // 
-            tsThumbnails.Items.AddRange(new ToolStripItem[] { tsbThumbnailsRotate90CCW, tsbThumbnailsRotate90CW, tsbThumbnailsDelete });
+            tsThumbnails.Items.AddRange(new ToolStripItem[] { tsbThumbnailsRotate90CCW, tsbThumbnailsRotate90CW, tsbThumbnailsDelete, toolStripSeparator11, tsbThumbnailsAllowPagesReorder });
             tsThumbnails.Location = new Point(4, 3);
             tsThumbnails.Name = "tsThumbnails";
             tsThumbnails.Size = new Size(296, 25);
@@ -504,6 +506,7 @@
             // 
             // thumbnailsView
             // 
+            thumbnailsView.AllowDrop = true;
             thumbnailsView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             thumbnailsView.ContentPosition = new Point(0, 0);
             thumbnailsView.Document = pdfDocument;
@@ -558,6 +561,13 @@
             pdfView.AnnotationSelected += pdfView_AnnotationSelected;
             pdfView.AnnotationDeselected += pdfView_AnnotationDeselected;
             pdfView.BeforeAnnotationDelete += pdfView_BeforeAnnotationDelete;
+            // 
+            // icons
+            // 
+            icons.ColorDepth = ColorDepth.Depth32Bit;
+            icons.ImageStream = (ImageListStreamer)resources.GetObject("icons.ImageStream");
+            icons.TransparentColor = Color.Transparent;
+            icons.Images.SetKeyName(0, "ThumbnailListView.png");
             // 
             // tsAnnotations
             // 
@@ -1145,12 +1155,21 @@
             tsmiOpenFull.Text = "Open file in full load mode";
             tsmiOpenFull.Click += tsmiOpenFull_Click;
             // 
-            // icons
+            // toolStripSeparator11
             // 
-            icons.ColorDepth = ColorDepth.Depth32Bit;
-            icons.ImageStream = (ImageListStreamer)resources.GetObject("icons.ImageStream");
-            icons.TransparentColor = Color.Transparent;
-            icons.Images.SetKeyName(0, "ThumbnailListView.png");
+            toolStripSeparator11.Name = "toolStripSeparator11";
+            toolStripSeparator11.Size = new Size(6, 25);
+            // 
+            // tsbThumbnailsAllowPagesReorder
+            // 
+            tsbThumbnailsAllowPagesReorder.CheckOnClick = true;
+            tsbThumbnailsAllowPagesReorder.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            tsbThumbnailsAllowPagesReorder.Image = (Image)resources.GetObject("tsbThumbnailsAllowPagesReorder.Image");
+            tsbThumbnailsAllowPagesReorder.ImageTransparentColor = Color.Magenta;
+            tsbThumbnailsAllowPagesReorder.Name = "tsbThumbnailsAllowPagesReorder";
+            tsbThumbnailsAllowPagesReorder.Size = new Size(23, 22);
+            tsbThumbnailsAllowPagesReorder.Text = "Allow pages reorder";
+            tsbThumbnailsAllowPagesReorder.CheckedChanged += tsbThumbnailsAllowPagesReorder_CheckedChanged;
             // 
             // AppForm
             // 
@@ -1295,6 +1314,8 @@
         private System.Windows.Forms.ToolStripButton tsbThumbnailsRotate90CW;
         private System.Windows.Forms.ToolStripButton tsbThumbnailsDelete;
         private ImageList icons;
+        private ToolStripSeparator toolStripSeparator11;
+        private ToolStripButton tsbThumbnailsAllowPagesReorder;
     }
 }
 
