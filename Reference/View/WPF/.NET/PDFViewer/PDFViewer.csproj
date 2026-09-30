@@ -17,7 +17,7 @@
   </PropertyGroup>
   
   <ItemGroup>
-    <PackageReference Include="PDF4DEV.Components.PDF4NET.View.NET.Wpf" Version="16.3.1.0" />
+    <PackageReference Include="PDF4DEV.Components.PDF4NET.View.NET.Wpf" Version="16.4.0.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -85,6 +85,12 @@
     <Resource Include="Resources\Thumbnails.Rotate90CCW.png" />
     <Resource Include="Resources\Thumbnails.Rotate90CW.png" />
     <Resource Include="Resources\Tab.Thumbnails.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\OutlineItem.Add.png" />
+    <Resource Include="Resources\OutlineItem.AddAfter.png" />
+    <Resource Include="Resources\OutlineItem.AddBefore.png" />
+    <Resource Include="Resources\OutlineItem.Delete.png" />
   </ItemGroup>
 
 </Project>

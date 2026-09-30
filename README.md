@@ -327,6 +327,7 @@ The main features of [**PDF4NET**](https://pdf4dev.com/pdf4net/overview.htm) lib
   - Included controls:
     * **PDFDocumentView** - PDF viewer control for displaying and interacting with PDF files
     * **PDFThumbnailsView** - PDF viewer control for displaying PDF page thumbnails
+    * **PDFDocumentOutlineView** - PDF viewer control for displaying the bookmarks in a PDF file
 	
 #### PDFDocumentView
   - Display PDF files in Windows Forms and WPF applications (.NET and .NET Framework supported)
@@ -410,6 +411,12 @@ The main features of [**PDF4NET**](https://pdf4dev.com/pdf4net/overview.htm) lib
   - Pages management
     * Rotate and delete pages using optional toolbar or context menu
     * Reorder pages using drag & drop
+
+#### PDFDocumentOutlineView
+  - Display PDF bookmarks in Windows Forms and WPF applications (.NET and .NET Framework supported)
+  - Interactive bookmarks - click on the bookmarks to navigate to desired section in the PDF document
+  - Bookmarks management
+    * Add, edit and delete bookmarks using optional toolbar or context menu
  
 ### LICENSING	 
  

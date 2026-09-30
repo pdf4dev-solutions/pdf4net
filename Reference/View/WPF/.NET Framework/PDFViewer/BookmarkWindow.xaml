@@ -1,0 +1,55 @@
+﻿<Window x:Class="PDFViewer.BookmarkWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PDFViewer"
+        mc:Ignorable="d"
+        Title="Add/Edit bookmark" Height="180" Width="270" ResizeMode="NoResize">
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Title:" Margin="2" VerticalAlignment="Center" />
+        <TextBox Grid.Row="0" Grid.Column="1" Margin="2" VerticalAlignment="Center" Width="200" x:Name="txtTitle" />
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Color:" Margin="2" VerticalAlignment="Center" />
+        <ComboBox Grid.Row="1" Grid.Column="1" Margin="2" VerticalAlignment="Center" x:Name="cbxColor" SelectedIndex="0" Width="200" >
+            <Rectangle Width="160" Height="20" Fill="Black"></Rectangle>
+            <Rectangle Width="160" Height="20" Fill="White"></Rectangle>
+            <Rectangle Width="160" Height="20" Fill="Gray"></Rectangle>
+            <Rectangle Width="160" Height="20" Fill="Silver"></Rectangle>
+            <Rectangle Width="160" Height="20" Fill="Maroon"></Rectangle>
+            <Rectangle Width="160" Height="20" Fill="Red"></Rectangle>
+            <Rectangle Width="160" Height="20" Fill="Purple"></Rectangle>
+            <Rectangle Width="160" Height="20" Fill="Fuchsia"></Rectangle>
+            <Rectangle Width="160" Height="20" Fill="Green"></Rectangle>
+            <Rectangle Width="160" Height="20" Fill="Lime"></Rectangle>
+            <Rectangle Width="160" Height="20" Fill="Olive"></Rectangle>
+            <Rectangle Width="160" Height="20" Fill="Yellow"></Rectangle>
+            <Rectangle Width="160" Height="20" Fill="Navy"></Rectangle>
+            <Rectangle Width="160" Height="20" Fill="Blue"></Rectangle>
+            <Rectangle Width="160" Height="20" Fill="Teal"></Rectangle>
+            <Rectangle Width="160" Height="20" Fill="Aqua"></Rectangle>
+        </ComboBox>
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Style:" Margin="2" VerticalAlignment="Center" />
+        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal">
+            <CheckBox Margin="2" VerticalAlignment="Center" x:Name="chkBold">Bold</CheckBox>
+            <CheckBox Margin="2" VerticalAlignment="Center" x:Name="chkItalic">Italic</CheckBox>
+        </StackPanel>
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="Page:" Margin="2" VerticalAlignment="Center" />
+        <ComboBox Grid.Row="3" Grid.Column="1" Margin="2" VerticalAlignment="Center" x:Name="cbxPage" SelectedIndex="0" DisplayMemberPath="Number" >
+        </ComboBox>
+        <StackPanel Grid.Row="4" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button x:Name="btnOK" Content="OK" Margin="8" VerticalAlignment="Center" Width="80" Click="btnOK_Click" />
+            <Button x:Name="btnCancel" Content="Cancel" Margin="8" VerticalAlignment="Center" Width="80" Click="btnCancel_Click" />
+        </StackPanel>
+    </Grid>
+</Window>

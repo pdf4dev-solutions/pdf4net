@@ -536,6 +536,70 @@ namespace PDFViewer
             thumbnailsView.AllowPagesReorder = tsbThumbnailsAllowPagesReorder.Checked;
         }
 
+        private void tsbBookmarksAdd_Click(object sender, EventArgs e)
+        {
+            BookmarkForm addBookmarkForm = new BookmarkForm();
+            addBookmarkForm.LoadPages(pdfDocument.Pages);
+            if (addBookmarkForm.ShowDialog() == DialogResult.OK)
+            {
+                PDFVisualOutlineItemCollection items = pdfOutlineView.SelectedOutlineItem == null ? pdfDocument.VisualOutline : pdfOutlineView.SelectedOutlineItem.Items;
+                items.Add(addBookmarkForm.OutlineItem);
+            }
+        }
+
+        private void tsbBookmarksAddBefore_Click(object sender, EventArgs e)
+        {
+            if (pdfOutlineView.SelectedOutlineItem == null)
+            {
+                MessageBox.Show("Please select a bookmark to add before.", ApplicationName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            BookmarkForm addBookmarkForm = new BookmarkForm();
+            addBookmarkForm.LoadPages(pdfDocument.Pages);
+            if (addBookmarkForm.ShowDialog() == DialogResult.OK)
+            {
+                PDFVisualOutlineItemCollection items = pdfOutlineView.SelectedOutlineItem.Parent == null ? pdfDocument.VisualOutline : pdfOutlineView.SelectedOutlineItem.Parent.Items;
+                items.Insert(items.IndexOf(pdfOutlineView.SelectedOutlineItem), addBookmarkForm.OutlineItem);
+            }
+        }
+
+        private void tsbBookmarksAddAfter_Click(object sender, EventArgs e)
+        {
+            if (pdfOutlineView.SelectedOutlineItem == null)
+            {
+                MessageBox.Show("Please select a bookmark to add after.", ApplicationName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            BookmarkForm addBookmarkForm = new BookmarkForm();
+            addBookmarkForm.LoadPages(pdfDocument.Pages);
+            if (addBookmarkForm.ShowDialog() == DialogResult.OK)
+            {
+                PDFVisualOutlineItemCollection items = pdfOutlineView.SelectedOutlineItem.Parent == null ? pdfDocument.VisualOutline : pdfOutlineView.SelectedOutlineItem.Parent.Items;
+                items.Insert(items.IndexOf(pdfOutlineView.SelectedOutlineItem) + 1, addBookmarkForm.OutlineItem);
+            }
+        }
+
+        private void tsbBookmarksDelete_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to delete the selected bookmark?", ApplicationName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                PDFVisualOutlineItem selectedItem = pdfOutlineView.SelectedOutlineItem;
+                if (selectedItem != null)
+                {
+                    if (selectedItem.Parent == null)
+                    {
+                        pdfDocument.VisualOutline.Remove(selectedItem);
+                    }
+                    else
+                    {
+                        selectedItem.Parent.Items.Remove(selectedItem);
+                    }
+                }
+            }
+        }
+
         private void pdfView_UserInteractionModeChanged(object sender, EventArgs e)
         {
             tsbPan.Checked = pdfView.UserInteractionMode == PDFUserInteractionMode.PanAndScan;
@@ -649,6 +713,11 @@ namespace PDFViewer
         private void thumbnailsView_BeforePageDelete(object sender, PDFVisualPageDeleteEventArgs e)
         {
             e.AllowDelete = MessageBox.Show("Are you sure you want to delete the current page?", ApplicationName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes;
+        }
+
+        private void pdfOutlineView_BeforeOutlineItemDelete(object sender, PDFVisualOutlineItemDeleteEventArgs e)
+        {
+            e.AllowDelete = MessageBox.Show("Are you sure you want to delete the selected bookmark?", ApplicationName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes;
         }
 
         private void EnableTools(bool enable)

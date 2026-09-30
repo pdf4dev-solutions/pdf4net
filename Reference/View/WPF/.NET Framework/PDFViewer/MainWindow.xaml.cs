@@ -28,6 +28,7 @@ namespace PDFViewer
             InitializeComponent();
             documentView.Document = visualDocument;
             thumbnailsView.Document = visualDocument;
+            outlineView.Document = visualDocument;
             contentLocator = new PDFVisualContentLocator(documentView);
             isSearchInitialized = false;
         }
@@ -400,6 +401,12 @@ namespace PDFViewer
         {
             e.AllowDelete = MessageBox.Show("Are you sure you want to delete the current page?", ApplicationName, MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes;
         }
+        
+        private void outlineView_BeforeOutlineItemDelete(object sender, PDFVisualOutlineItemDeleteEventArgs e)
+        {
+            e.AllowDelete = MessageBox.Show("Are you sure you want to delete the current bookmark?", ApplicationName, MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes;
+        }
+
 
         private void cbxZoom_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {

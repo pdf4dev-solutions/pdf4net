@@ -67,6 +67,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="BookmarkWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -76,9 +80,13 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="BookmarkWindow.xaml.cs">
+      <DependentUpon>BookmarkWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CommandHandler.cs" />
     <Compile Include="MainWindow.Commands.Comment.cs" />
     <Compile Include="MainWindow.Commands.EditForm.cs" />
+    <Compile Include="MainWindow.Commands.OutlineItems.cs" />
     <Compile Include="MainWindow.Commands.Thumbnails.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -184,6 +192,12 @@
     <Resource Include="Resources\Thumbnails.Rotate90CCW.png" />
     <Resource Include="Resources\Thumbnails.Rotate90CW.png" />
     <Resource Include="Resources\Tab.Thumbnails.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\OutlineItem.Add.png" />
+    <Resource Include="Resources\OutlineItem.AddAfter.png" />
+    <Resource Include="Resources\OutlineItem.AddBefore.png" />
+    <Resource Include="Resources\OutlineItem.Delete.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

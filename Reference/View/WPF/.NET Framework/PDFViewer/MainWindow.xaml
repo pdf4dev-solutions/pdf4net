@@ -292,6 +292,42 @@
                         />
                     </Grid>
                 </TabItem>
+                <TabItem ToolTip="Bookmarks">
+                    <TabItem.Header>
+                        <Viewbox Stretch="Uniform" Width="16" Height="16">
+                            <Canvas Background="Transparent" Width="16" Height="16">
+                            <Path Data="M6.26719 1C5.56045 1 4.94884 1.40731 4.6543 2H10.9004C12.0602 2 13.0004 2.9402 13.0004 4.1V13.0796C13.5931 12.785 14.0004 12.1734 14.0004 11.4667V4.1C14.0004 2.38792 12.6125 1 10.9004 1H6.26719Z" Fill="#202020" />
+                            <Path Data="M4.75 3C3.7835 3 3 3.7835 3 4.75V14.5C3 14.7022 3.12182 14.8845 3.30866 14.9619C3.4955 15.0393 3.71055 14.9966 3.85355 14.8536L7.5 11.2071L11.1464 14.8536C11.2894 14.9966 11.5045 15.0393 11.6913 14.9619C11.8782 14.8845 12 14.7022 12 14.5V4.75C12 3.7835 11.2165 3 10.25 3H4.75ZM4 4.75C4 4.33579 4.33579 4 4.75 4H10.25C10.6642 4 11 4.33579 11 4.75V13.2929L7.85355 10.1464C7.65829 9.95118 7.34171 9.95118 7.14645 10.1464L4 13.2929V4.75Z" Fill="#202020" />
+                            </Canvas>
+                        </Viewbox>
+                    </TabItem.Header>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <ToolBarTray Grid.Row="0">
+                            <ToolBar Band="1" BandIndex="1">
+                                <Button Command="{Binding OutlineItemsAddCommand}" ToolTip="Add bookmark">
+                                    <Image Source="/Resources/OutlineItem.Add.png" Style="{StaticResource ImageDisabled}" />
+                                </Button>
+                                <Button Command="{Binding OutlineItemsAddBeforeCommand}" ToolTip="Add bookmark before">
+                                    <Image Source="/Resources/OutlineItem.AddBefore.png" Style="{StaticResource ImageDisabled}" />
+                                </Button>
+                                <Button Command="{Binding OutlineItemsAddAfterCommand}" ToolTip="Add bookmark after">
+                                    <Image Source="/Resources/OutlineItem.AddAfter.png" Style="{StaticResource ImageDisabled}" />
+                                </Button>
+                                <Button Command="{Binding OutlineItemsDeleteCommand}" ToolTip="Delete">
+                                    <Image Source="/Resources/OutlineItem.Delete.png" Style="{StaticResource ImageDisabled}" />
+                                </Button>
+                            </ToolBar>
+                        </ToolBarTray>
+                        <pdfView:PDFDocumentOutlineView x:Name="outlineView" Grid.Row="1" 
+                            Background="LightGray" DocumentView="{Binding ElementName=documentView}" 
+                            BeforeOutlineItemDelete="outlineView_BeforeOutlineItemDelete"
+                        />
+                    </Grid>
+                </TabItem>
             </TabControl>
             <GridSplitter Background="#969696"  ResizeDirection="Columns" Grid.Column="1" Width="5"
                 HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 

@@ -500,21 +500,21 @@ namespace PDFViewer
 
         private void tsbThumbnailsRotate90CCW_Click(object sender, EventArgs e)
         {
-            int rotation = pdfDocument.Pages[thumbnailsView.PageNumber].Rotation;
+            int rotation = pdfDocument.Pages[pdfThumbnailsView.PageNumber].Rotation;
             rotation -= 90;
             if (rotation < 0)
             {
                 rotation += 360;
             }
-            pdfDocument.Pages[thumbnailsView.PageNumber].Rotation = rotation;
+            pdfDocument.Pages[pdfThumbnailsView.PageNumber].Rotation = rotation;
         }
 
         private void tsbThumbnailsRotate90CW_Click(object sender, EventArgs e)
         {
-            int rotation = pdfDocument.Pages[thumbnailsView.PageNumber].Rotation;
+            int rotation = pdfDocument.Pages[pdfThumbnailsView.PageNumber].Rotation;
             rotation += 90;
             rotation %= 360;
-            pdfDocument.Pages[thumbnailsView.PageNumber].Rotation = rotation;
+            pdfDocument.Pages[pdfThumbnailsView.PageNumber].Rotation = rotation;
         }
 
         private void tsbThumbnailsDelete_Click(object sender, EventArgs e)
@@ -527,13 +527,80 @@ namespace PDFViewer
 
             if (MessageBox.Show("Are you sure you want to delete the current page?", ApplicationName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                pdfDocument.Pages.RemoveAt(thumbnailsView.PageNumber);
+                pdfDocument.Pages.RemoveAt(pdfThumbnailsView.PageNumber);
             }
         }
 
         private void tsbThumbnailsAllowPagesReorder_CheckedChanged(object sender, EventArgs e)
         {
-            thumbnailsView.AllowPagesReorder = tsbThumbnailsAllowPagesReorder.Checked;
+            pdfThumbnailsView.AllowPagesReorder = tsbThumbnailsAllowPagesReorder.Checked;
+        }
+
+        private void tsbBookmarksAdd_Click(object sender, EventArgs e)
+        {
+            BookmarkForm addBookmarkForm = new BookmarkForm();
+            addBookmarkForm.LoadPages(pdfDocument.Pages);
+            if (addBookmarkForm.ShowDialog() == DialogResult.OK)
+            {
+                PDFVisualOutlineItemCollection items = pdfOutlineView.SelectedOutlineItem == null ? pdfDocument.VisualOutline : pdfOutlineView.SelectedOutlineItem.Items;
+                items.Add(addBookmarkForm.OutlineItem);
+            }
+        }
+
+        private void tsbBookmarksAddBefore_Click(object sender, EventArgs e)
+        {
+            if (pdfOutlineView.SelectedOutlineItem == null)
+            {
+                MessageBox.Show("Please select a bookmark to add before.", ApplicationName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            BookmarkForm addBookmarkForm = new BookmarkForm();
+            addBookmarkForm.LoadPages(pdfDocument.Pages);
+            if (addBookmarkForm.ShowDialog() == DialogResult.OK)
+            {
+                PDFVisualOutlineItemCollection items = pdfOutlineView.SelectedOutlineItem.Parent == null ? pdfDocument.VisualOutline : pdfOutlineView.SelectedOutlineItem.Parent.Items;
+                items.Insert(items.IndexOf(pdfOutlineView.SelectedOutlineItem), addBookmarkForm.OutlineItem);
+            }
+        }
+
+        private void tsbBookmarksAddAfter_Click(object sender, EventArgs e)
+        {
+            if (pdfOutlineView.SelectedOutlineItem == null)
+            {
+                MessageBox.Show("Please select a bookmark to add after.", ApplicationName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            BookmarkForm addBookmarkForm = new BookmarkForm();
+            addBookmarkForm.LoadPages(pdfDocument.Pages);
+            if (addBookmarkForm.ShowDialog() == DialogResult.OK)
+            {
+                PDFVisualOutlineItemCollection items = pdfOutlineView.SelectedOutlineItem.Parent == null ? pdfDocument.VisualOutline : pdfOutlineView.SelectedOutlineItem.Parent.Items;
+                items.Insert(items.IndexOf(pdfOutlineView.SelectedOutlineItem) + 1, addBookmarkForm.OutlineItem);
+            }
+        }
+
+        private void tsbBookmarksDelete_Click(object sender, EventArgs e)
+        {
+            if (pdfOutlineView.SelectedOutlineItem == null)
+            {
+                MessageBox.Show("Please select a bookmark to delete.", ApplicationName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            if (MessageBox.Show("Are you sure you want to delete the selected bookmark?", ApplicationName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                PDFVisualOutlineItem selectedItem = pdfOutlineView.SelectedOutlineItem;
+                if (selectedItem.Parent == null)
+                {
+                    pdfDocument.VisualOutline.Remove(selectedItem);
+                }
+                else
+                {
+                    selectedItem.Parent.Items.Remove(selectedItem);
+                }
+            }
         }
 
         private void pdfView_UserInteractionModeChanged(object sender, EventArgs e)
@@ -649,6 +716,11 @@ namespace PDFViewer
         private void thumbnailsView_BeforePageDelete(object sender, PDFVisualPageDeleteEventArgs e)
         {
             e.AllowDelete = MessageBox.Show("Are you sure you want to delete the current page?", ApplicationName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes;
+        }
+
+        private void outlineView_BeforeOutlineItemDelete(object sender, PDFVisualOutlineItemDeleteEventArgs e)
+        {
+            e.AllowDelete = MessageBox.Show("Are you sure you want to delete the selected bookmark?", ApplicationName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes;
         }
 
         private void EnableTools(bool enable)
