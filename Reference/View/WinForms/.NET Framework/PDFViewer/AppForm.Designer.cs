@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AppForm));
-            O2S.Components.PDF4NET.View.Layouts.PDFColumnBasedPageDisplayLayout pdfColumnBasedPageDisplayLayout2 = new O2S.Components.PDF4NET.View.Layouts.PDFColumnBasedPageDisplayLayout();
+            O2S.Components.PDF4NET.View.Layouts.PDFColumnBasedPageDisplayLayout pdfColumnBasedPageDisplayLayout2 = new O2S.Components.PDF4NET.View.Layouts.PDFColumnBasedPageDisplayLayout(0);
             O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance20 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
             O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance1 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
             O2S.Components.PDF4NET.View.PathVisualAppearance pathVisualAppearance2 = new O2S.Components.PDF4NET.View.PathVisualAppearance();
