@@ -6,7 +6,7 @@
         xmlns:pdfView="clr-namespace:O2S.Components.PDF4NET.View;assembly=O2S.Components.PDF4NET.View.Wpf"
         xmlns:local="clr-namespace:PDFViewer"
         mc:Ignorable="d"
-        Title="PDF4NET - PDF Viewer" Height="450" Width="800"
+        Title="PDF4NET - PDF Viewer Sample for WPF" Height="450" Width="800"
         Loaded="Window_Loaded"
         Closing="Window_Closing">
     <Window.Resources>

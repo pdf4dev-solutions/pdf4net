@@ -33,7 +33,7 @@ namespace PDFViewer
             isSearchInitialized = false;
         }
 
-        private const string ApplicationName = "PDF4NET - PDF Viewer";
+        private const string ApplicationName = "PDF4NET - PDF Viewer Sample for WPF";
 
         private PDFVisualDocument visualDocument;
 

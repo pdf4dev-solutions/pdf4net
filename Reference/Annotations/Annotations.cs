@@ -280,8 +280,9 @@ namespace O2S.Components.PDF4NET.Samples
             PDFInkAnnotation ia = new PDFInkAnnotation();
             page.Annotations.Add(ia);
             ia.Contents = "I am an ink annotation.";
-            ia.InkColor = new PDFRgbColor(255, 0, 255);
-            ia.InkWidth = 5;
+            ia.Ink = new PDFAnnotationBorder();
+            ia.Ink.Color = new PDFRgbColor(255, 0, 255);
+            ia.Ink.Width = 5;
             ia.Points = points;
         }
 

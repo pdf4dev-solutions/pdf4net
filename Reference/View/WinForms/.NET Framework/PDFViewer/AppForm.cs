@@ -810,9 +810,10 @@ namespace PDFViewer
 
         private void InitDefaultApearances()
         {
-            pdfView.TextSelectionAppearance = new PathVisualAppearance(null, new SolidBrush(Color.FromArgb(128, Color.BlueViolet)));
-            pdfView.SelectionRectangleAppearance = new PathVisualAppearance(new Pen(Color.Blue, 1), new SolidBrush(Color.FromArgb(64, Color.LightBlue)));
-            pdfView.AnnotationSelectionRectangleAppearance = new PathVisualAppearance(new Pen(Color.Blue, 1), new SolidBrush(Color.FromArgb(64, Color.LightBlue)));
+            pdfView.TextSelectionAppearance = new PathVisualAppearance(null, new SolidBrush(Color.FromArgb(128, 0xF3, 0x75, 0x32)));
+            pdfView.SelectionRectangleAppearance = new PathVisualAppearance(new Pen(Color.FromArgb(0xF3, 0x75, 0x32), 1), new SolidBrush(Color.FromArgb(64, 0xF3, 0x75, 0x32)));
+            pdfView.AnnotationSelectionRectangleAppearance = new PathVisualAppearance(new Pen(Color.FromArgb(0xF3, 0x75, 0x32), 1), new SolidBrush(Color.FromArgb(64, 0xF3, 0x75, 0x32)));
+            pdfView.ResizeHandleStyle = ResizeHandleStyle.Square;
 
             pdfView.DefaultTextAnnotationAppearance = new PathVisualAppearance(new Pen(Color.Black, 1), null);
             pdfView.DefaultFileAttachmentAnnotationAppearance = new PathVisualAppearance(new Pen(Color.Black, 1), null);
